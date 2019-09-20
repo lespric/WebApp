@@ -1,7 +1,7 @@
 @media all and (orientation: portrait) {
   @media (min-width: 980px) {
     html {
-      font-size: 2rem;
+      font-size: 32px;
     }
     body {
       min-width: 960px;
@@ -9,12 +9,12 @@
   } /* 竖屏电脑 */
   @media (min-width: 768px) and (max-width: 979px) {
     html {
-      font-size: 1.5rem;
+      font-size: 24px;
     }
   } /* 竖屏平板 */
   @media (max-width: 767px) {
     html {
-      font-size: 1rem;
+      font-size: 16px;
     }
   } /* 竖屏手机 */
 }
@@ -149,7 +149,11 @@ main {
 
   font-size: 1.2em;
   color: #787878;
-} /* 定义按钮下的文字样式 */
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+} /* 定义按钮下的文字样式及隐藏的省略号样式 */
 
 #sel_game .carousel-indicators {
   bottom: 1em;
