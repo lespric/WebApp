@@ -1,176 +1,176 @@
 @media all and (orientation: portrait) {
-    @media (min-width: 980px) {
-      html {
-        font-size: 2rem;
-      }
-      body {
-        min-width: 960px;
-      }
-    } /* 竖屏电脑 */
-    @media (min-width: 768px) and (max-width: 979px) {
-      html {
-        font-size: 1.5rem;
-      }
-    } /* 竖屏平板 */
-    @media (max-width: 767px) {
-      html {
-        font-size: 1rem;
-      }
-    } /* 竖屏手机 */
-  }
-  
-  @media all and (orientation: landscape) {
-    @media (min-width: 1024px) {
-      html {
-        font-size: 1rem;
-      }
-    } /*横屏网页 */
-    @media (max-width: 1023px) {
-      html {
-        font-size: 1rem;
-      }
+  @media (min-width: 980px) {
+    html {
+      font-size: 2rem;
     }
-  } /* 横屏手机 */
-  @font-face {
-    font-family: "HiraginoSansGBW3";
-    src: url("../home/fonts/HiraginoSansGBW3/HiraginoSansGBW3.otf")
-        format("opentype"),
-      url("../home/fonts/HiraginoSansGBW3/HiraginoSansGBW3.woff2") format("woff2"),
-      url("../home/fonts/HiraginoSansGBW3/HiraginoSansGBW3.woff") format("woff"),
-      url("../home/fonts/HiraginoSansGBW3/HiraginoSansGBW3.ttf")
-        format("truetype"),
-      url("../home/fonts/HiraginoSansGBW3/HiraginoSansGBW3.eot")
-        format("embedded-opentype"),
-      url("../home/fonts/HiraginoSansGBW3/HiraginoSansGBW3.svg") format("svg");
-  } /* 引用设计字体 */
+    body {
+      min-width: 960px;
+    }
+  } /* 竖屏电脑 */
+  @media (min-width: 768px) and (max-width: 979px) {
+    html {
+      font-size: 1.5rem;
+    }
+  } /* 竖屏平板 */
+  @media (max-width: 767px) {
+    html {
+      font-size: 1rem;
+    }
+  } /* 竖屏手机 */
+}
+
+@media all and (orientation: landscape) {
+  @media (min-width: 1024px) {
+    html {
+      font-size: 1rem;
+    }
+  } /*横屏网页 */
+  @media (max-width: 1023px) {
+    html {
+      font-size: 1rem;
+    }
+  }
+} /* 横屏手机 */
+@font-face {
+  font-family: "HiraginoSansGBW3";
+  src: url("../WebApp/fonts/HiraginoSansGBW3/HiraginoSansGBW3.otf")
+      format("opentype"),
+    url("../WebApp/fonts/HiraginoSansGBW3/HiraginoSansGBW3.woff2")
+      format("woff2"),
+    url("../WebApp/fonts/HiraginoSansGBW3/HiraginoSansGBW3.woff") format("woff"),
+    url("../WebApp/fonts/HiraginoSansGBW3/HiraginoSansGBW3.ttf")
+      format("truetype"),
+    url("../WebApp/fonts/HiraginoSansGBW3/HiraginoSansGBW3.eot")
+      format("embedded-opentype"),
+    url("../WebApp/fonts/HiraginoSansGBW3/HiraginoSansGBW3.svg") format("svg");
+} /* 引用设计字体 */
 
 body {
-    font-size: .625rem;
-    -webkit-tap-highlight-color: transparent;
+  font-size: 0.625rem;
+  -webkit-tap-highlight-color: transparent;
 }
 .btn,
 .btn-hover {
-    border: 0 solid #FFF;
-    outline: none;
-    background: none;
-    box-shadow: none;
-    border-radius: 0;
-} 
+  border: 0 solid #fff;
+  outline: none;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+}
 .btn:active {
-    background: #666;
-    opacity: .3;
+  background: #666;
+  opacity: 0.3;
 } /* 定义按钮的默认样式和点击状态 */
 .glyphicon {
-    color: #FFF;
-    font-size: 1.6em;
+  color: #fff;
+  font-size: 1.6em;
 } /* 定义全局样式，及字体图标的颜色和默认尺寸 */
 
 #home_page .dropdown-toggle {
-    width: auto;
-    height: 4.4em;
+  width: auto;
+  height: 4.4em;
 }
 #home_page .dropdown-menu {
-    width: 3em;
+  width: 3em;
 
-    font-size: 1.6em;
+  font-size: 1.6em;
 } /* 定义下拉菜单的按钮和字体大小 */
 
-
 main {
-    margin-top: 4.4em;
+  margin-top: 4.4em;
 } /* 定义主体内容的位置 */
 
 #game_entrance {
-    padding: 1.4em 1.8em;
+  padding: 1.4em 1.8em;
 } /* 定义游戏入口内容的整体布局 */
 
 #last_game {
-    height: 5.8em;
+  height: 5.8em;
 } /* 定义按钮的高度 */
 #last_game button,
 #last_game button:hover {
-    display: flex;
-    align-items: center;
-    padding: 0;
+  display: flex;
+  align-items: center;
+  padding: 0;
 
-    height: 5.8em;
-    color: #9A9A9A;
-    vertical-align: middle
+  height: 5.8em;
+  color: #9a9a9a;
+  vertical-align: middle;
 } /* 定义按钮的字体样式 */
 #last_game .text {
-    margin: auto auto;    
-    font-size: 1.8em;
+  margin: auto auto;
+  font-size: 1.8em;
 } /* 定义按钮的字体位置 */
 #last_game .glyphicon-chevron-right {
-    margin-left: 0;
-    margin-right: .25em;
+  margin-left: 0;
+  margin-right: 0.25em;
 
-    font-size: 2.4em;
-    color: #E7E7E7;
+  font-size: 2.4em;
+  color: #e7e7e7;
 } /* 定义按钮的向右字体图标样式 */
 
 #sel_game {
-    margin-top: 1.4em;
+  margin-top: 1.4em;
 } /* 定义两个板块的间距 */
 #sel_game .panel-heading {
-    height: 2.3em;
+  height: 2.3em;
 
-    font-size: 2em;
-    color: #FBB435;
+  font-size: 2em;
+  color: #fbb435;
 } /* 定义面板头部的样式 */
 #sel_game .divider {
-    border-bottom: .1em solid #FBB435;
+  border-bottom: 0.1em solid #fbb435;
 } /* 定义分隔线的样式 */
 
 #sel_game .panel-body {
-    height: 35.3em;
-    padding: 0;
+  height: 35.3em;
+  padding: 0;
 } /* 定义内容区的高度和内间距 */
 #sel_game .list-group {
-    padding: 0 3.6em;
+  padding: 0 3.6em;
 } /* 定义内容区的左右间距 */
 
 #sel_game .panel-body button {
-    height: 4.25em;
-    margin-top: .875em;
+  height: 4.25em;
+  margin-top: 0.875em;
 
-    font-size: 1.6em;
-    background-color: #69D1E9;
+  font-size: 1.6em;
+  background-color: #69d1e9;
 } /* 定义内容区按钮的样式 */
 #sel_game .panel-body p {
-    margin-top: 1em;
+  margin-top: 1em;
 
-    font-size: 1.2em;
-    color: #787878;
+  font-size: 1.2em;
+  color: #787878;
 } /* 定义按钮下的文字样式 */
 
 #sel_game .carousel-indicators {
-    bottom: 1em;
-    margin-bottom: 0;
+  bottom: 1em;
+  margin-bottom: 0;
 
-    height: 1em;
+  height: 1em;
 } /* 定义轮播图底下指标的位置 */
 #sel_game .carousel-indicators li {
-    width: 1em;
-    height: 1em;
+  width: 1em;
+  height: 1em;
 
-    border-radius: 50%;
-    background-color: #F0F0F0;
+  border-radius: 50%;
+  background-color: #f0f0f0;
 }
 #sel_game .carousel-indicators li:hover,
 #sel_game .carousel-indicators li:active {
-    background-color: #69D1E9;
+  background-color: #69d1e9;
 } /* 定义轮播图底下指标的样式和状态 */
 
 #sel_game .carousel-control {
-    width: 1.4em;
-    margin-right: .2em;
+  width: 1.4em;
+  margin-right: 0.2em;
 
-    background: none;
-    opacity: 1;
+  background: none;
+  opacity: 1;
 } /* 定义向前翻页的控制器的位置 */
 #sel_game .glyphicon-triangle-right {
-    line-height: 11.8em;
-    font-size: 1.7em;
-    color: #FBB435;
+  line-height: 11.8em;
+  font-size: 1.7em;
+  color: #fbb435;
 } /* 定义向前翻页的控制器的样式 */
