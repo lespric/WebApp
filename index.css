@@ -71,7 +71,8 @@ body {
   height: 4.4em;
 }
 #home_page .dropdown-menu {
-  width: 3em;
+  width: 5em;
+  min-width: 5em;
 
   font-size: 1.6em;
 } /* 定义下拉菜单的按钮和字体大小 */
