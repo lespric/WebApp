@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>桌游精灵</title>
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="format-detection" content="telephone=no,email=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="../WebApp/bootstrap/bootstrap.min.css" />
+  </head>
+
+  <body>
+    <header class="navbar navbar-fixed-top navbar-default" id="home_page">
+      <article class="dropdown">
+        <button
+          type="button"
+          class="btn dropdown-toggle"
+          data-toggle="dropdown"
+        >
+          <span class="glyphicon glyphicon-align-justify"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li>设置</li>
+          <li>关于</li>
+        </ul>
+      </article>
+    </header>
+    <!--标题栏或导航栏-->
+
+    <main>
+      <article id="game_entrance">
+        <section class="panel" id="last_game">
+          <button type="button" class="btn btn-block">
+            <span class="text">上次游戏：捉鬼猜词版</span>
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </button>
+        </section>
+        <!--“上次游戏”板块-->
+
+        <section class="panel carousel slide" id="sel_game">
+          <ol class="carousel-indicators">
+            <li data-target="#sel_game" data-side-to="0" class="active"></li>
+            <li data-target="#sel_game" data-side-to="1"></li>
+            <li data-target="#sel_game" data-side-to="2"></li>
+            <li data-target="#sel_game" data-side-to="3"></li>
+          </ol>
+          <!--“捉鬼游戏”板块轮播计数器-->
+
+          <div class="carousel-inner">
+            <div class="item active">
+              <div class="panel-heading text-center">
+                捉鬼游戏
+              </div>
+              <!--“捉鬼游戏”板块头部-->
+
+              <div class="divider"></div>
+              <!--“捉鬼游戏”板块分隔线-->
+
+              <div class="panel-body">
+                <ul class="list-group list-unstyled">
+                  <li class="list-group-items">
+                    <button
+                      class="btn btn-block btn-primary list-group-item-heading"
+                      type="button">
+                      简化版
+                    </button>
+                    <p class="list-group-item-text text-center">
+                      有1133个用户正在玩此款游戏
+                    </p>
+                  </li>
+
+                  <li class="list-group-items">
+                    <button
+                      class="btn btn-block btn-primary list-group-item-heading"
+                      type="button">
+                      猜词版
+                    </button>
+                    <p class="list-group-item-text text-center">
+                      有1133个用户正在玩此款游戏
+                    </p>
+                  </li>
+
+                  <li class="list-group-items">
+                    <button
+                      class="btn btn-block btn-primary list-group-item-heading"
+                      type="button">
+                      白痴版
+                    </button>
+                    <p class="list-group-item-text text-center">
+                      有1133个用户正在玩此款游戏
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="item">
+                <div class="panel-heading text-center">
+                    谁是卧底
+                </div>
+                <div class="divider"></div>
+                <div class="panel-body"></div>
+            </div>
+            <div class="item">
+                <div class="panel-heading text-center">
+                    狼人游戏
+                </div>
+                <div class="divider"></div>
+                <div class="panel-body"></div>
+            </div>
+            <div class="item">
+                <div class="panel-heading text-center">
+                    炸狼堡
+                </div>
+                <div class="divider"></div>
+                <div class="panel-body"></div>
+            </div>
+          </div>
+          <!--“捉鬼游戏”板块轮播内容-->
+
+          <a class="carousel-control right" href="#sel_game" data-slide="next">
+          <span class="glyphicon glyphicon-triangle-right"></span>
+          </a>
+          <!--“捉鬼游戏”板块翻页-->
+        </section>
+        <!--“捉鬼游戏”板块-->
+    </main>
+
+    
+    
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      async
+      defer
+    ></script>
+    <script
+      src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"
+      async
+      defer
+    ></script>
+  </body>
+</html>
