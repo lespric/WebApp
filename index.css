@@ -50,6 +50,7 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 .btn,
+.btn:active,
 .btn-hover {
   border: 0 solid #fff;
   outline: none;
@@ -124,7 +125,7 @@ main {
 } /* 定义分隔线的样式 */
 
 #sel_game .panel-body {
-  height: 35.3em;
+  height: 35em;
   padding: 0;
 } /* 定义内容区的高度和内间距 */
 #sel_game .list-group {
@@ -159,19 +160,25 @@ main {
   background-color: #f0f0f0;
 }
 #sel_game .carousel-indicators li:hover,
-#sel_game .carousel-indicators li:active {
+#sel_game .carousel-indicators .active {
   background-color: #69d1e9;
-} /* 定义轮播图底下指标的样式和状态 */
+} /* 定义轮播图底下指标的样式和点击状态 */
 
 #sel_game .carousel-control {
-  width: 1.4em;
   margin-right: 0.2em;
+  top: 50%;
+
+  width: 1.4em;
+  height: 1.8em;
 
   background: none;
   opacity: 1;
 } /* 定义向前翻页的控制器的位置 */
 #sel_game .glyphicon-triangle-right {
-  line-height: 11.8em;
   font-size: 1.7em;
   color: #fbb435;
 } /* 定义向前翻页的控制器的样式 */
+#sel_game .carousel-control:active {
+    box-shadow: none;
+    opacity: 0.5;
+}
