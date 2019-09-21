@@ -23,89 +23,242 @@
 
   <body>
     <header class="navbar navbar-fixed-top navbar-default">
-        <article class="dropdown text-left">
-            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
-                <span class="glyphicon glyphicon-list-alt"></span>
-            </button>
-            <ul class="dropdown-menu">
-                <li class="text-center">战绩</li>
-                <li class="text-center">积分</li>
-            </ul>
-        </article>
-        <article class="text-right">
-            <button type="button" class="btn">
-                <a class="glyphicon glyphicon-remove" href="index.html"></a>
-            </button>
-        </article>
+      <span class="tittle text-center">投票</span>
+      <!--为避免影响覆盖图标按钮而点击不了，后面会叠加在上面-->
+      <article class="dropdown">
+        <button
+          type="button"
+          class="btn dropdown-toggle"
+          data-toggle="dropdown"
+        >
+          <span class="glyphicon glyphicon-list-alt"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li class="text-center">战绩</li>
+          <li class="text-center">积分</li>
+        </ul>
+      </article>
+      <article class="text-right">
+        <button type="button" class="btn">
+          <a class="glyphicon glyphicon-remove" href="index.html"></a>
+        </button>
+      </article>
     </header>
     <!--标题栏或导航栏-->
 
     <main>
-      <article id="game_entrance">
-        <section class="panel" id="last_game">
-          <button type="button" class="btn btn-block">
-            <span class="text">上次游戏：捉鬼猜词版</span>
-            <span class="glyphicon glyphicon-chevron-right"></span>
-          </button>
+      <article id="vote">
+        <section class="container">
+          <span
+            title=" "
+            data-container="body"
+            data-toggle="popover"
+            data-placement="top"
+            data-content="发言讨论结束，大家请投票"
+            onclick="playPause()"
+          >
+            点击得票数最多人的头像
+          </span>
+          <!--提示弹出框的打开和音频播放暂停的控制-->
+          <audio
+            id="votebgm"
+            src="../WebApp/audio/财富自由.mp3"
+            loop="loop"
+            autoplay="autoplay"
+          >
+            亲 您的浏览器不支持html5的audio标签
+          </audio>
         </section>
-        <!--“上次游戏”板块-->
 
-        <section class="panel carousel slide" id="sel_game">
-          <ol class="carousel-indicators">
-            <li data-target="#sel_game" data-slide-to="0" class="active"></li>
-            <li data-target="#sel_game" data-slide-to="1"></li>
-            <li data-target="#sel_game" data-slide-to="2"></li>
-            <li data-target="#sel_game" data-slide-to="3"></li>
-          </ol>
-          <!--“捉鬼游戏”板块轮播计数器-->
-
-          <div class="carousel-inner">
-            <div class="item active">
-              <div class="panel-heading text-center">
-                捉鬼游戏
+        <section class="container">
+          <div class="row">
+            <div class="col-xs-4">
+              <div class="sculpture">
+                <p class="name text-center">水民</p>
+                <p class="numb text-center">1号</p>
               </div>
-              <!--“捉鬼游戏”板块头部-->
-
-              <div class="divider"></div>
-              <!--“捉鬼游戏”板块分隔线-->
-
-              <div class="panel-body">
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
               </div>
             </div>
 
-            <div class="item">
-                <div class="panel-heading text-center">
-                    谁是卧底
-                </div>
-                <div class="divider"></div>
-                <div class="panel-body"></div>
+            <div class="col-xs-4">
+              <div class="sculpture">
+                <p class="name text-center">水民</p>
+                <p class="numb text-center">2号</p>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
             </div>
-            <div class="item">
-                <div class="panel-heading text-center">
-                    狼人游戏
-                </div>
-                <div class="divider"></div>
-                <div class="panel-body"></div>
-            </div>
-            <div class="item">
-                <div class="panel-heading text-center">
-                    炸狼堡
-                </div>
-                <div class="divider"></div>
-                <div class="panel-body"></div>
+
+            <div class="col-xs-4">
+              <div class="sculpture">
+                <p class="name text-center">警察</p>
+                <p class="numb text-center">3号</p>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
             </div>
           </div>
-          <!--“捉鬼游戏”板块轮播内容-->
 
-          <a class="carousel-control right" href="#sel_game" data-slide="next">
-          <span class="glyphicon glyphicon-triangle-right"></span>
-          </a>
-          <!--“捉鬼游戏”板块翻页-->
+          <div class="row">
+            <div class="col-xs-4">
+              <div class="sculpture">
+                <p class="name text-center">法官</p>
+                <p class="numb text-center">4号</p>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
+            </div>
+
+            <div class="col-xs-4">
+              <div class="sculpture">
+                <p class="name text-center">狙击手</p>
+                <p class="numb text-center">5号</p>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
+            </div>
+
+            <div class="col-xs-4">
+              <div class="sculpture">
+                <p class="name text-center">医生</p>
+                <p class="numb text-center">6号</p>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-4">
+              <div class="sculpture">
+                <p class="name text-center">杀手</p>
+                <p class="numb text-center">7号</p>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
+            </div>
+
+            <div class="col-xs-4">
+              <div class="sculpture">
+                <p class="name text-center">水民</p>
+                <p class="numb text-center">8号</p>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
+            </div>
+
+            <div class="col-xs-4">
+              <div class="sculpture">
+                <p class="name text-center">水民</p>
+                <p class="numb text-center">9号</p>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-4">
+              <div class="sculpture">
+                <p class="name text-center">水民</p>
+                <p class="numb text-center">10号</p>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
+            </div>
+
+            <div class="col-xs-4">
+              <div class="sculpture">
+                <p class="name text-center">水民</p>
+                <p class="numb text-center">11号</p>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
+            </div>
+
+            <div class="col-xs-4">
+              <div class="sculpture">
+                <p class="name text-center">警察</p>
+                <p class="numb text-center">12号</p>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
+            </div>
+          </div>
         </section>
-        <!--“捉鬼游戏”板块-->
+      </article>
     </main>
-    
-    <script defer src="../WebApp/bootstrap/jquery.min.js"></script>
-    <script defer src="../WebApp/bootstrap/bootstrap.min.js"></script>
+
+    <footer class="navbar navbar-default navbar-fixed-bottom">
+        <div class="divider">
+            <button type="button" class="btn btn-block">投死</button>
+        </div>
+    </footer>
+
+    <script src="../WebApp/bootstrap/jquery.min.js"></script>
+    <script src="../WebApp/bootstrap/bootstrap.min.js"></script>
+    <script>
+      $(function() {
+        $('[data-toggle="popover"]').popover();
+      }); //弹出提示框的触发条件
+
+      var votebgm = document.getElementById("votebgm");
+      function playPause() {
+        if (votebgm.paused) {
+          votebgm.play();
+        } else {
+          votebgm.pause();
+        }
+      } //背景音乐的播放与暂停
+    </script>
   </body>
 </html>

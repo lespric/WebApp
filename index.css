@@ -72,9 +72,9 @@ body {
   font-size: 1.6em;
 } /* 定义全局样式，及字体图标的颜色和默认尺寸 */
 
-header {
-  position: relative;
-}
+.navbar-default {
+  border-color: #29bde0!important;
+} /* 忘记在自定义样式时去掉默认的边框 */
 header .glyphicon {
   font-size: 2em;
 } /* 定义标题栏的图标大小 */
@@ -85,17 +85,26 @@ header .text-right {
   position: absolute;
   top: 0;
   right: 0;
-}
+} /* 定义关闭图标的位置 */
 header .btn {
   width: auto;
   height: 4.4em;
-}
-.dropdown-menu {
-  width: 5em;
-  min-width: 5em;
+} /* 定义标题栏按钮的大小 */
+header .tittle {
+  position: absolute;
+  top: 0;
 
+  height: 100%;
+  width: 100%;
+
+  font-size: 1.8em;
+  color: #FFF;
+  line-height: 2.8em;
+} /* 定义标题的位置和样式 */
+header .dropdown-menu {
+  min-width: 5em;
   font-size: 1.6em;
-} /* 定义下拉菜单的按钮和字体大小 */
+} /* 定义下拉菜单的字体大小 */
 
 main {
   margin-top: 4.4em;
@@ -207,3 +216,160 @@ main {
     opacity: 0.5;
 }
 
+#vote {
+  background-color: #29BDE0;
+  color: #FFF;
+} /* 定义投票界面的全局样式 */
+
+#vote .container:first-child {
+  position: relative;
+  padding-left: 3em;
+
+  height: 5.4em;
+  font-size: 1.2em;
+}
+.container:first-child span {
+  position: absolute;
+  bottom: 0;
+} /* 定义提示区的样式 */
+
+body .popover-content {
+  padding-left: 1.5em;
+  width: 100%;
+
+  font-size: 1.4em;
+  color: #464646;
+}
+body .popover {
+  width: 100%;
+  max-width: none;
+  top: 5.4em!important;
+
+  border: none;
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.67);
+  box-shadow: none;
+}
+body .popover .arrow {
+   left: 4.2em!important;
+   transform: scaleX(0.5);
+
+   opacity: 0.67;
+} /* 定义提示弹出框的样式，因在其html文件隐藏，需要在chrome调试并通过提高权值或最高权值来覆盖 */
+
+body .popover-title {
+    position: absolute;
+    right: .9em;
+    margin: 0;
+    padding: 0;
+    border: none;
+    
+    width: 4em;
+    height: 100%;
+
+    background: url(../WebApp/img/play@2x.png) no-repeat center;
+    background-size: 2.6em 2.6em;
+} /* 定义提示弹出框中的音频播放键按钮 */
+
+.container:nth-child(2) {
+  padding-top: 1em;
+  padding-bottom: 10.5em;
+} /*定义投票部分的上间距 */
+.container:nth-child(2) .row {
+  margin-top: 1.2em;
+
+  padding: 0 0.5em;
+  display: flex;
+  justify-content: space-between;
+} /* 定义网格系统的行的样式 */
+.col-xs-4 {
+  padding: 0 5%!important;
+} /* 定义水槽的宽度 */
+
+.sculpture {
+  display: flex;
+  flex-direction: column;
+
+  width: 7.1em;
+  height: 7.1em;
+
+  background-color: #FFF;
+  border: .3em solid #FFF;
+} /* 定义头像的背景图 */
+.sculpture .name {
+  margin: 0;
+
+  width: 100%;
+  height: 70%;
+
+  background-color: #f5c97b;
+  font-size: 1.6em;
+  color: #565656;
+  line-height: 3em;
+} /* 定义头像名字的样式 */
+.sculpture .numb {
+  margin: 0;
+
+  width: 100%;
+  height: 30%;
+
+  background-color:rgba(26, 153, 183, 0.52);
+  font-size: 1.2em;
+} /* 定义头像编号的样式 */
+
+.col-xs-4 .btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.2em;
+
+  width: 7.1em;
+
+  visibility: hidden;
+} /* 定义按钮组的位置和布局 */
+.col-xs-4 .btn-group .btn {
+    margin: 0;
+    padding: 0;
+
+    width: 1.5em;
+    height: 1.5em;
+} /* 定义按钮的样式 */
+.col-xs-4 .btn-group .btn:first-child {
+  background: url(../WebApp/img/kill.png) no-repeat center;
+  background-size: cover;
+}
+.col-xs-4 .btn-group .btn:nth-child(2) {
+  background: url(../WebApp/img/check.png) no-repeat center;
+  background-size: cover;
+}
+.col-xs-4 .btn-group .btn:nth-child(3) {
+  background: url(../WebApp/img/sign.png) no-repeat center;
+  background-size: cover;
+}
+.col-xs-4 .btn-group .btn:last-child {
+  background: url(../WebApp/img/save.png) no-repeat center;
+  background-size: cover;
+} /* 定义各个按钮的图像 */
+
+.sculpture:hover + .btn-group {
+  visibility: visible;
+} /* 定义头像在悬浮状态时，显示按钮组 */
+
+footer .divider {
+    display: flex;
+    margin: 0 2em;
+    height: 9.5em;
+
+    border-top: .1em solid #FFF;
+} /* 定义底部栏的分隔线的样式 */
+footer .btn {
+  margin: auto 0.6em;
+  height: 2.2em;
+  
+  font-size: 2em;
+  background-color: #FBB435;
+  color: #FFF;
+} /* 定义底部栏的按钮的样式 */
+footer .btn:active,
+footer .btn:hover {
+  color: #FFF;
+} /* 定义底部栏的按钮的点击状态 */
