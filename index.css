@@ -1,7 +1,7 @@
 @media all and (orientation: portrait) {
   @media (min-width: 980px) {
     html {
-      font-size: 32px;
+      font-size: 1rem;
     }
     body {
       min-width: 960px;
@@ -9,12 +9,12 @@
   } /* 竖屏电脑 */
   @media (min-width: 768px) and (max-width: 979px) {
     html {
-      font-size: 24px;
+      font-size: 1rem;
     }
   } /* 竖屏平板 */
   @media (max-width: 767px) {
     html {
-      font-size: 16px;
+      font-size: 1rem;
     }
   } /* 竖屏手机 */
 }
@@ -228,11 +228,12 @@ main {
 #vote {
   background-color: #29BDE0;
   color: #FFF;
+  min-height: 81.2em;
 } /* 定义投票界面的全局样式 */
 
 #vote .container:first-child {
   position: relative;
-  padding-left: 3em;
+  padding-left: 11.25%;
 
   height: 5.4em;
   font-size: 1.2em;
@@ -253,6 +254,7 @@ body .popover {
   width: 100%;
   max-width: none;
   top: 5.4em!important;
+  z-index: 500;
 
   border: none;
   border-radius: 0;
@@ -260,7 +262,7 @@ body .popover {
   box-shadow: none;
 }
 body .popover .arrow {
-   left: 4.2em!important;
+   left: 13%!important;
    transform: scaleX(0.5);
 
    opacity: 0.67;
@@ -278,7 +280,19 @@ body .popover-title {
 
     background: url(../WebApp/img/play@2x.png) no-repeat center;
     background-size: 2.6em 2.6em;
+
+    -webkit-animation: rotate 3s linear infinite;
+    animation: rotate 5s linear infinite;
 } /* 定义提示弹出框中的音频播放键按钮 */
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} /* 定义音频播放时，按钮旋转动画 */
 
 .container:nth-child(2) {
   padding-top: 1em;
@@ -291,9 +305,12 @@ body .popover-title {
   display: flex;
   justify-content: space-between;
 } /* 定义网格系统的行的样式 */
-.col-xs-4 {
+#vote .col-xs-4 {
   padding: 0 5%!important;
-} /* 定义水槽的宽度 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} /* 定义水槽的宽度，以及垂直居中对齐布局 */
 
 .sculpture {
   display: flex;
@@ -365,13 +382,13 @@ body .popover-title {
 
 footer .divider {
     display: flex;
-    margin: 0 2em;
+    margin: 0 6.25%;
     height: 9.5em;
 
     border-top: .1em solid #FFF;
 } /* 定义底部栏的分隔线的样式 */
 footer .btn {
-  margin: auto 0.6em;
+  margin: auto 1.875%;
   height: 2.2em;
   
   font-size: 2em;
