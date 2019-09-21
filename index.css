@@ -37,7 +37,7 @@
   }
 } /* 横屏手机 */
 @font-face {
-  font-family: "HiraginoSansGBW3";
+  font-family: "HiraginoSansGB-W3";
   src: url("../WebApp/fonts/HiraginoSansGBW3/HiraginoSansGBW3.otf")
       format("opentype"),
     url("../WebApp/fonts/HiraginoSansGBW3/HiraginoSansGBW3.woff2")
@@ -72,11 +72,25 @@ body {
   font-size: 1.6em;
 } /* 定义全局样式，及字体图标的颜色和默认尺寸 */
 
-#home_page .dropdown-toggle {
+header {
+  position: relative;
+}
+header .glyphicon {
+  font-size: 2em;
+} /* 定义标题栏的图标大小 */
+header .glyphicon-menu-hamburger {
+    transform: scaleX(1.2);
+} /* 定义汉堡包图标的样式 */
+header .text-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+header .btn {
   width: auto;
   height: 4.4em;
 }
-#home_page .dropdown-menu {
+.dropdown-menu {
   width: 5em;
   min-width: 5em;
 
@@ -94,8 +108,8 @@ main {
 #last_game {
   height: 5.8em;
 } /* 定义按钮的高度 */
-#last_game button,
-#last_game button:hover {
+#last_game .btn,
+#last_game .btn:hover {
   display: flex;
   align-items: center;
   padding: 0;
@@ -191,3 +205,4 @@ main {
     box-shadow: none;
     opacity: 0.5;
 }
+

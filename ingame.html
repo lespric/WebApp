@@ -23,30 +23,30 @@
 
   <body>
     <header class="navbar navbar-fixed-top navbar-default">
-      <article class="dropdown">
-        <button
-          type="button"
-          class="btn dropdown-toggle"
-          data-toggle="dropdown"
-        >
-          <span class="glyphicon glyphicon-menu-hamburger"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li class="text-center">设置</li>
-          <li class="text-center">关于</li>
-        </ul>
-      </article>
-      
+        <article class="dropdown text-left">
+            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                <span class="glyphicon glyphicon-list-alt"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="text-center">战绩</li>
+                <li class="text-center">积分</li>
+            </ul>
+        </article>
+        <article class="text-right">
+            <button type="button" class="btn">
+                <a class="glyphicon glyphicon-remove" href="index.html"></a>
+            </button>
+        </article>
     </header>
     <!--标题栏或导航栏-->
 
     <main>
       <article id="game_entrance">
         <section class="panel" id="last_game">
-          <a type="button" class="btn btn-block" href="ingame.html">
+          <button type="button" class="btn btn-block">
             <span class="text">上次游戏：捉鬼猜词版</span>
             <span class="glyphicon glyphicon-chevron-right"></span>
-          </a>
+          </button>
         </section>
         <!--“上次游戏”板块-->
 
@@ -70,40 +70,6 @@
               <!--“捉鬼游戏”板块分隔线-->
 
               <div class="panel-body">
-                <ul class="list-group list-unstyled">
-                  <li class="list-group-items">
-                    <button
-                      class="btn btn-block btn-primary list-group-item-heading"
-                      type="button">
-                      简化版
-                    </button>
-                    <p class="list-group-item-text text-center">
-                      有1133个用户正在玩此款游戏
-                    </p>
-                  </li>
-
-                  <li class="list-group-items">
-                    <button
-                      class="btn btn-block btn-primary list-group-item-heading"
-                      type="button">
-                      猜词版
-                    </button>
-                    <p class="list-group-item-text text-center">
-                      有1133个用户正在玩此款游戏
-                    </p>
-                  </li>
-
-                  <li class="list-group-items">
-                    <button
-                      class="btn btn-block btn-primary list-group-item-heading"
-                      type="button">
-                      白痴版
-                    </button>
-                    <p class="list-group-item-text text-center">
-                      有1133个用户正在玩此款游戏
-                    </p>
-                  </li>
-                </ul>
               </div>
             </div>
 
@@ -136,10 +102,9 @@
           </a>
           <!--“捉鬼游戏”板块翻页-->
         </section>
-      </article>
         <!--“捉鬼游戏”板块-->
     </main>
-
+    
     <script defer src="../WebApp/bootstrap/jquery.min.js"></script>
     <script defer src="../WebApp/bootstrap/bootstrap.min.js"></script>
   </body>
