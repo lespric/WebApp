@@ -64,9 +64,11 @@ body {
 .btn:hover {
   border: 0 solid #fff;
   outline: none;
-  background: none;
   box-shadow: none;
   border-radius: 0;
+}
+.btn {
+  background: none;
 }
 a:hover {
   text-decoration: none!important; 
