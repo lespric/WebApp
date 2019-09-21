@@ -343,6 +343,7 @@ body .popover-title {
 
   background-color:rgba(26, 153, 183, 0.52);
   font-size: 1.2em;
+  line-height: 1.8em;
 } /* 定义头像编号的样式 */
 
 .col-xs-4 .btn-group {
