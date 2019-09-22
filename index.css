@@ -267,7 +267,7 @@ body .popover {
   width: 100%;
   max-width: none;
   top: 5.4em!important;
-  z-index: 500;
+  z-index: 1;
 
   border: none;
   border-radius: 0;
@@ -336,9 +336,10 @@ body .popover-title {
   background-color: #FFF;
   border: .3em solid #FFF;
 } /* 定义头像的背景图 */
-.sculpture:hover {
+.sculpture:hover，
+.sculpture:active {
   border: .3em solid #FBB435;
-}
+} /* 定义头像的悬浮状态 */
 .sculpture .name {
   margin: 0;
 
@@ -365,7 +366,7 @@ body .popover-title {
   position: absolute;
   right: 0;
   display: none;
-} /* 定义徽章即得票人数 */
+} /* 定义标签即得票人数 */
 .col-xs-4 .btn-group {
   display: flex;
   justify-content: space-between;
@@ -399,12 +400,14 @@ body .popover-title {
   background-size: cover;
 } /* 定义各个按钮的图像 */
 
-.sculpture:hover + .btn-group {
+.sculpture:hover + .btn-group,
+.sculpture:active + .btn-group {
   visibility: visible;
-} /* 定义头像在悬浮状态时，显示按钮组 */
-.sculpture:hover > .label {
+} /* 定义头像在点击或悬浮状态时，显示按钮组 */
+.sculpture:hover > .label,
+.sculpture:active > .label {
   display: block;
-} /* 定义头像在悬浮状态时，显示得票数 */
+} /* 定义头像在点击或悬浮状态时，显示得票数 */
 
 #vote_tabbar .divider {
     display: flex;
@@ -431,7 +434,8 @@ body .popover-title {
 #victory_navbar {
   border-bottom: .1em solid rgba(255, 255, 255, 0.35);
   margin: 0;
-}
+} /* 定义游戏结果页的标题栏的下边线 */
+
 #victory .media {
   display: flex;
   flex-direction: column;
@@ -470,7 +474,6 @@ body .popover-title {
 
 #victory  .media .row {
   margin: 0;
-
 }
 #victory .row .col-xs-4,
 #victory .row .col-xs-8 {
@@ -539,6 +542,7 @@ body .popover-title {
   margin-left: 1.2em;
 }
 #victory_tabbar .btn:hover,
+#victory_tabbar .btn:active,
 #victory_tabbar a {
    border-radius: .25em;
    color: #FFF;
