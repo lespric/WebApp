@@ -210,8 +210,10 @@ main {
 #sel_game .carousel-indicators li:hover,
 #sel_game .carousel-indicators .active {
   background-color: #69d1e9;
+}
+#sel_game a {
+  color: #FFF;
 } /* 定义轮播图底下指标的样式和点击状态 */
-
 #sel_game .carousel-control {
   margin-right: 0.2em;
   top: 50%;
