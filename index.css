@@ -112,7 +112,7 @@ header .tittle {
   line-height: 2.8em;
 } /* 定义标题的位置和样式 */
 header .dropdown-menu {
-  min-width: 5em;
+  min-width: 8em;
 } 
 header .dropdown-menu li {
   font-size: 1.6em;
