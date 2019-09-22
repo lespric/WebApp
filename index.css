@@ -115,7 +115,9 @@ header .dropdown-menu {
   min-width: 5em;
   font-size: 1.6em;
 } /* 定义下拉菜单的字体大小 */
-#vote_navbar {
+#vote_navbar,
+#vote_tabbar,
+#victory_tabbar {
   border-color: #29bde0;
 } /* 忘记在自定义样式时去掉默认的边框 */
 
