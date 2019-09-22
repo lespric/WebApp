@@ -71,10 +71,12 @@ body {
 }
 .btn {
   background: none;
+  cursor: pointer!important;
 }
 a,
 a:hover {
   text-decoration: none!important; 
+  cursor: pointer!important;
 } /* 去除按钮和a的默认样式 */
 .btn:active {
   background: #666;
@@ -254,6 +256,7 @@ main {
 .container:first-child span {
   position: absolute;
   bottom: 0;
+  cursor: pointer;
 } /* 定义提示区的样式 */
 
 body .popover-content {
@@ -335,9 +338,9 @@ body .popover-title {
 
   background-color: #FFF;
   border: .3em solid #FFF;
+
 } /* 定义头像的背景图 */
-.sculpture:hover，
-.sculpture:active {
+.sculpture:hover {
   border: .3em solid #FBB435;
 } /* 定义头像的悬浮状态 */
 .sculpture .name {
