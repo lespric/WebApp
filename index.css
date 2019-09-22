@@ -113,8 +113,11 @@ header .tittle {
 } /* 定义标题的位置和样式 */
 header .dropdown-menu {
   min-width: 5em;
+} 
+header .dropdown-menu li {
   font-size: 1.6em;
-} /* 定义下拉菜单的字体大小 */
+  line-height: 2;
+}/* 定义下拉菜单的字体大小和行高 */
 #vote_navbar,
 #vote_tabbar,
 #victory_tabbar {
