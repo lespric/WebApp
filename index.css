@@ -120,6 +120,7 @@ header .dropdown-menu {
 #victory_tabbar {
   border-color: #29bde0;
 } /* 忘记在自定义样式时去掉默认的边框 */
+/* 以上为标题栏或导航栏的样式 */
 
 main {
   margin-top: 4.4em;
@@ -231,8 +232,8 @@ main {
 #sel_game .carousel-control:active {
     box-shadow: none;
     opacity: 0.5;
-}
-
+} /* 定义向前翻页的按钮点击状态 */
+/* 以上为首页index.html的样式*/
 
 #vote,
 #victory {
@@ -422,6 +423,7 @@ body .popover-title {
 #vote_tabbar .btn:hover {
   color: #FFF;
 } /* 定义底部栏的按钮的点击状态 */
+/* 以上为投票页ingame.html的样式*/
 
 #victory_navbar {
   border-bottom: .1em solid rgba(255, 255, 255, 0.35);
@@ -538,3 +540,4 @@ body .popover-title {
    border-radius: .25em;
    color: #FFF;
 } /* 定义两个按钮的尺寸和布局 */
+/* 以上为游戏结果页result.html的样式*/
