@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../WebApp/bootstrap/bootstrap.min.css" />
   </head>
 
-  <body>
+  <body ontouchstart="">
     <header class="navbar navbar-fixed-top navbar-default">
       <span class="tittle text-center">投票</span>
       <!--为避免影响覆盖图标按钮而点击不了，后面会叠加在上面-->
@@ -50,6 +50,7 @@
       <article id="vote">
         <section class="container">
           <span
+            id="votepopover"
             title=" "
             data-container="main"
             data-toggle="popover"
@@ -57,9 +58,12 @@
             data-content="发言讨论结束，大家请投票"
             onclick="playPause()"
           >
-            点击得票数最多人的头像
+            点击聆听
+            <a class="glyphicon glyphicon-play-circle"></a>
+            得票数最多人的头像发言
+
           </span>
-          <!--提示弹出框的打开和音频播放暂停的控制-->
+
           <audio
             id="votebgm"
             src="../WebApp/audio/财富自由.mp3"
@@ -68,13 +72,16 @@
             亲 您的浏览器不支持html5的audio标签
           </audio>
         </section>
+        <!--提示弹出框区，及其打开和音频播放暂停的控制-->
 
         <section class="container">
           <div class="row">
             <div class="col-xs-4">
               <div class="sculpture">
+                <span class="label label-danger">3</span>
                 <p class="name text-center">水民</p>
-                <p class="numb text-center">1号</p>
+                <p class="numb text-center">1号
+                </p>
               </div>
               <div class="btn-group">
                 <button type="button" class="btn"></button>
@@ -86,6 +93,7 @@
 
             <div class="col-xs-4">
               <div class="sculpture">
+                <span class="label label-danger">1</span>
                 <p class="name text-center">水民</p>
                 <p class="numb text-center">2号</p>
               </div>
@@ -99,6 +107,7 @@
 
             <div class="col-xs-4">
               <div class="sculpture">
+                <span class="label label-danger">0</span>
                 <p class="name text-center">警察</p>
                 <p class="numb text-center">3号</p>
               </div>
@@ -114,6 +123,7 @@
           <div class="row">
             <div class="col-xs-4">
               <div class="sculpture">
+                <span class="label label-danger">0</span>
                 <p class="name text-center">法官</p>
                 <p class="numb text-center">4号</p>
               </div>
@@ -127,6 +137,7 @@
 
             <div class="col-xs-4">
               <div class="sculpture">
+                <span class="label label-danger">1</span>
                 <p class="name text-center">狙击手</p>
                 <p class="numb text-center">5号</p>
               </div>
@@ -140,6 +151,7 @@
 
             <div class="col-xs-4">
               <div class="sculpture">
+                <span class="label label-danger">0</span>
                 <p class="name text-center">医生</p>
                 <p class="numb text-center">6号</p>
               </div>
@@ -155,6 +167,7 @@
           <div class="row">
             <div class="col-xs-4">
               <div class="sculpture">
+                <span class="label label-danger">4</span>
                 <p class="name text-center">杀手</p>
                 <p class="numb text-center">7号</p>
               </div>
@@ -168,6 +181,7 @@
 
             <div class="col-xs-4">
               <div class="sculpture">
+                <span class="label label-danger">0</span>
                 <p class="name text-center">水民</p>
                 <p class="numb text-center">8号</p>
               </div>
@@ -181,6 +195,7 @@
 
             <div class="col-xs-4">
               <div class="sculpture">
+                <span class="label label-danger">1</span>
                 <p class="name text-center">水民</p>
                 <p class="numb text-center">9号</p>
               </div>
@@ -196,6 +211,7 @@
           <div class="row">
             <div class="col-xs-4">
               <div class="sculpture">
+                <span class="label label-danger">0</span>
                 <p class="name text-center">水民</p>
                 <p class="numb text-center">10号</p>
               </div>
@@ -209,6 +225,7 @@
 
             <div class="col-xs-4">
               <div class="sculpture">
+                <span class="label label-danger">0</span>
                 <p class="name text-center">水民</p>
                 <p class="numb text-center">11号</p>
               </div>
@@ -222,6 +239,7 @@
 
             <div class="col-xs-4">
               <div class="sculpture">
+                <span class="label label-danger">1</span>
                 <p class="name text-center">警察</p>
                 <p class="numb text-center">12号</p>
               </div>
@@ -234,12 +252,15 @@
             </div>
           </div>
         </section>
+        <!--投票头像区-->
       </article>
     </main>
 
-    <footer class="navbar navbar-default navbar-fixed-bottom">
+    <footer class="navbar navbar-default navbar-fixed-bottom" id="vote_tabbar">
         <div class="divider">
-            <button type="button" class="btn btn-block">投死</button>
+            <button type="button" class="btn btn-block">
+              <a href="result.html">投死</a>
+            </button>
         </div>
     </footer>
 
@@ -258,6 +279,14 @@
           votebgm.pause();
         }
       } //背景音乐的播放与暂停
+
+     var votepopover=document.getElementById('votepopover');
+     function voteclick() {
+       votepopover.click();
+     }
+     setTimeout("voteclick()", 2000);
+     //自动点击来弹出提示框，但audio却无法由此生效；
+
     </script>
   </body>
 </html>
