@@ -75,7 +75,6 @@ body {
 a,
 a:hover {
   text-decoration: none!important; 
-  color: #FFF!important;
 } /* 去除按钮和a的默认样式 */
 .btn:active {
   background: #666;
@@ -86,9 +85,6 @@ a:hover {
   font-size: 1.6em;
 } /* 定义全局样式，及字体图标的颜色和默认尺寸 */
 
-.navbar-default {
-  border-color: #29bde0!important;
-} /* 忘记在自定义样式时去掉默认的边框 */
 header .glyphicon {
   font-size: 2em;
 } /* 定义标题栏的图标大小 */
@@ -119,6 +115,9 @@ header .dropdown-menu {
   min-width: 5em;
   font-size: 1.6em;
 } /* 定义下拉菜单的字体大小 */
+#vote_navbar {
+  border-color: #29bde0;
+} /* 忘记在自定义样式时去掉默认的边框 */
 
 main {
   margin-top: 4.4em;
@@ -414,20 +413,22 @@ body .popover-title {
   background-color: #FBB435;
   color: #FFF;
 } /* 定义底部栏的按钮的样式 */
+#vote_tabbar a,
 #vote_tabbar .btn:active,
 #vote_tabbar .btn:hover {
   color: #FFF;
 } /* 定义底部栏的按钮的点击状态 */
 
-
+#victory_navbar {
+  border-bottom: .1em solid rgba(255, 255, 255, 0.35);
+  margin: 0;
+}
 #victory .media {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   padding: 1.2em 12.5%;
-
-  border-top: .1em solid rgba(255, 255, 255, 0.35);
 } /* 定义胜利界面的居中对齐 */
 
 #victory .media .media-middle {
@@ -528,6 +529,8 @@ body .popover-title {
 #victory_tabbar .btn:last-child {
   margin-left: 1.2em;
 }
-#victory_tabbar .btn:hover {
+#victory_tabbar .btn:hover,
+#victory_tabbar a {
    border-radius: .25em;
+   color: #FFF;
 } /* 定义两个按钮的尺寸和布局 */
