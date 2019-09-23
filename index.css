@@ -65,7 +65,11 @@ body {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-} /* 定义全局字体大小，以及禁止文本被选择 */
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+} /* 定义全局字体大小，以及禁止文本被选择，及省略号样式 */
 
 .btn,
 .btn:active,
@@ -133,7 +137,7 @@ header .dropdown-menu li {
 } /* 忘记在自定义样式时去掉默认的边框 */
 /* 以上为标题栏或导航栏的样式 */
 
-#vote {
+#game_entrance {
   margin-top: 4.4em;
 } /* 定义主体内容的位置 */
 
