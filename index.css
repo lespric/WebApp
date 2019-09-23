@@ -65,11 +65,7 @@ body {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-} /* 定义全局字体大小，以及禁止文本被选择，及省略号样式 */
+} /* 定义全局字体大小，以及禁止文本被选择 */
 
 .btn,
 .btn:active,
@@ -137,7 +133,7 @@ header .dropdown-menu li {
 } /* 忘记在自定义样式时去掉默认的边框 */
 /* 以上为标题栏或导航栏的样式 */
 
-#game_entrance {
+main {
   margin-top: 4.4em;
 } /* 定义主体内容的位置 */
 
@@ -468,7 +464,7 @@ header .dropdown-menu li {
   width: 17.6em;
   height: 10.3em;
 
-  background: url(../WebApp/img/victory@2x\.png) no-repeat;
+  background: url(../WebApp/img/victory@2x\ .png) no-repeat;
   background-size: cover;
 } /* 定义胜利界面图片的尺寸 */
 #victory .media .media-heading {
