@@ -340,9 +340,6 @@ body .popover-title {
   border: .3em solid #FFF;
 
 } /* 定义头像的背景图 */
-.sculpture:hover {
-  border: .3em solid #FBB435;
-} /* 定义头像的悬浮状态 */
 .sculpture .name {
   margin: 0;
 
@@ -403,14 +400,21 @@ body .popover-title {
   background-size: cover;
 } /* 定义各个按钮的图像 */
 
+.vote_sel {
+  display: none;
+} /* 隐藏头像投票区单选框 */
+.sculpture:hover,
+.vote_sel:checked + .sculpture{
+  border: .3em solid #FBB435;
+} /* 定义头像的悬浮状态,及单选框的选中状态 */
 .sculpture:hover + .btn-group,
-.sculpture:active + .btn-group {
+.vote_sel:checked ~ .btn-group {
   visibility: visible;
-} /* 定义头像在点击或悬浮状态时，显示按钮组 */
+} /* 定义头像在悬浮状态，及单选框的选中状态时，显示按钮组 */
 .sculpture:hover > .label,
-.sculpture:active > .label {
+.vote_sel:checked + .sculpture .label {
   display: block;
-} /* 定义头像在点击或悬浮状态时，显示得票数 */
+} /* 定义头像在悬浮状态，及单选框的选中状态时，显示得票数 */
 
 #vote_tabbar .divider {
     display: flex;

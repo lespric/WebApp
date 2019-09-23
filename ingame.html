@@ -47,7 +47,7 @@
     <!--标题栏或导航栏-->
 
     <main>
-      <article id="vote">
+      <form id="vote" action="result.html" method="post">
         <section class="container">
           <span
             id="votepopover"
@@ -63,11 +63,7 @@
             得票数最多人的头像发言
           </span>
 
-          <audio
-            id="votebgm"
-            src="../WebApp/audio/财富自由.mp3"
-            loop="loop"
-          >
+          <audio id="votebgm" src="../WebApp/audio/财富自由.mp3" loop="loop">
             亲 您的浏览器不支持html5的audio标签
           </audio>
         </section>
@@ -76,12 +72,17 @@
         <section class="container">
           <div class="row">
             <div class="col-xs-4">
-              <div class="sculpture">
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel1"
+                class="vote_sel"
+              />
+              <label for="vote_sel1" class="sculpture">
                 <span class="label label-danger">3</span>
                 <p class="name text-center">水民</p>
-                <p class="numb text-center">1号
-                </p>
-              </div>
+                <p class="numb text-center">1号</p>
+              </label>
               <div class="btn-group">
                 <button type="button" class="btn"></button>
                 <button type="button" class="btn"></button>
@@ -91,11 +92,17 @@
             </div>
 
             <div class="col-xs-4">
-              <div class="sculpture">
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel2"
+                class="vote_sel"
+              />
+              <label for="vote_sel2" class="sculpture">
                 <span class="label label-danger">1</span>
                 <p class="name text-center">水民</p>
                 <p class="numb text-center">2号</p>
-              </div>
+              </label>
               <div class="btn-group">
                 <button type="button" class="btn"></button>
                 <button type="button" class="btn"></button>
@@ -105,11 +112,17 @@
             </div>
 
             <div class="col-xs-4">
-              <div class="sculpture">
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel3"
+                class="vote_sel"
+              />
+              <label for="vote_sel3" class="sculpture">
                 <span class="label label-danger">0</span>
                 <p class="name text-center">警察</p>
                 <p class="numb text-center">3号</p>
-              </div>
+              </label>
               <div class="btn-group">
                 <button type="button" class="btn"></button>
                 <button type="button" class="btn"></button>
@@ -121,11 +134,17 @@
 
           <div class="row">
             <div class="col-xs-4">
-              <div class="sculpture">
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel4"
+                class="vote_sel"
+              />
+              <label for="vote_sel4" class="sculpture">
                 <span class="label label-danger">0</span>
                 <p class="name text-center">法官</p>
                 <p class="numb text-center">4号</p>
-              </div>
+              </label>
               <div class="btn-group">
                 <button type="button" class="btn"></button>
                 <button type="button" class="btn"></button>
@@ -135,11 +154,17 @@
             </div>
 
             <div class="col-xs-4">
-              <div class="sculpture">
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel5"
+                class="vote_sel"
+              />
+              <label for="vote_sel5" class="sculpture">
                 <span class="label label-danger">1</span>
                 <p class="name text-center">狙击手</p>
                 <p class="numb text-center">5号</p>
-              </div>
+              </label>
               <div class="btn-group">
                 <button type="button" class="btn"></button>
                 <button type="button" class="btn"></button>
@@ -149,11 +174,17 @@
             </div>
 
             <div class="col-xs-4">
-              <div class="sculpture">
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel6"
+                class="vote_sel"
+              />
+              <label for="vote_sel6" class="sculpture">
                 <span class="label label-danger">0</span>
                 <p class="name text-center">医生</p>
                 <p class="numb text-center">6号</p>
-              </div>
+              </label>
               <div class="btn-group">
                 <button type="button" class="btn"></button>
                 <button type="button" class="btn"></button>
@@ -165,11 +196,17 @@
 
           <div class="row">
             <div class="col-xs-4">
-              <div class="sculpture">
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel7"
+                class="vote_sel"
+              />
+              <label for="vote_sel7" class="sculpture">
                 <span class="label label-danger">4</span>
                 <p class="name text-center">杀手</p>
                 <p class="numb text-center">7号</p>
-              </div>
+              </label>
               <div class="btn-group">
                 <button type="button" class="btn"></button>
                 <button type="button" class="btn"></button>
@@ -179,11 +216,17 @@
             </div>
 
             <div class="col-xs-4">
-              <div class="sculpture">
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel8"
+                class="vote_sel"
+              />
+              <label for="vote_sel8" class="sculpture">
                 <span class="label label-danger">0</span>
                 <p class="name text-center">水民</p>
                 <p class="numb text-center">8号</p>
-              </div>
+              </label>
               <div class="btn-group">
                 <button type="button" class="btn"></button>
                 <button type="button" class="btn"></button>
@@ -193,11 +236,17 @@
             </div>
 
             <div class="col-xs-4">
-              <div class="sculpture">
-                <span class="label label-danger">1</span>
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel9"
+                class="vote_sel"
+              />
+              <label for="vote_sel9" class="sculpture">
+                <span class="label label-danger">0</span>
                 <p class="name text-center">水民</p>
                 <p class="numb text-center">9号</p>
-              </div>
+              </label>
               <div class="btn-group">
                 <button type="button" class="btn"></button>
                 <button type="button" class="btn"></button>
@@ -209,11 +258,17 @@
 
           <div class="row">
             <div class="col-xs-4">
-              <div class="sculpture">
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel10"
+                class="vote_sel"
+              />
+              <label for="vote_sel10" class="sculpture">
                 <span class="label label-danger">0</span>
                 <p class="name text-center">水民</p>
                 <p class="numb text-center">10号</p>
-              </div>
+              </label>
               <div class="btn-group">
                 <button type="button" class="btn"></button>
                 <button type="button" class="btn"></button>
@@ -223,11 +278,17 @@
             </div>
 
             <div class="col-xs-4">
-              <div class="sculpture">
-                <span class="label label-danger">0</span>
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel11"
+                class="vote_sel"
+              />
+              <label for="vote_sel11" class="sculpture">
+                <span class="label label-danger">1</span>
                 <p class="name text-center">水民</p>
                 <p class="numb text-center">11号</p>
-              </div>
+              </label>
               <div class="btn-group">
                 <button type="button" class="btn"></button>
                 <button type="button" class="btn"></button>
@@ -237,11 +298,17 @@
             </div>
 
             <div class="col-xs-4">
-              <div class="sculpture">
-                <span class="label label-danger">1</span>
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel12"
+                class="vote_sel"
+              />
+              <label for="vote_sel12" class="sculpture">
+                <span class="label label-danger">0</span>
                 <p class="name text-center">警察</p>
                 <p class="numb text-center">12号</p>
-              </div>
+              </label>
               <div class="btn-group">
                 <button type="button" class="btn"></button>
                 <button type="button" class="btn"></button>
@@ -251,17 +318,21 @@
             </div>
           </div>
         </section>
-        <!--投票头像区-->
-      </article>
-    </main>
+        <!--投票头像选择区-->
 
-    <footer class="navbar navbar-default navbar-fixed-bottom" id="vote_tabbar">
-        <div class="divider">
-            <button type="button" class="btn btn-block">
-              <a href="result.html">投死</a>
+        <footer
+          class="navbar navbar-default navbar-fixed-bottom"
+          id="vote_tabbar"
+        >
+          <div class="divider">
+            <button type="submit" class="btn btn-block">
+              投死
             </button>
-        </div>
-    </footer>
+          </div>
+        </footer>
+        <!--投票提交区-->
+      </form>
+    </main>
 
     <script src="../WebApp/bootstrap/jquery.min.js"></script>
     <script src="../WebApp/bootstrap/bootstrap.min.js"></script>
@@ -279,13 +350,12 @@
         }
       } //背景音乐的播放与暂停
 
-     var votepopover=document.getElementById('votepopover');
-     function voteclick() {
-       votepopover.click();
-     }
-     setTimeout("voteclick()", 2000);
-     //自动点击来弹出提示框，但audio在chrome没有生效，但在移动端可以，但会很卡；
-
+      var votepopover = document.getElementById("votepopover");
+      function voteclick() {
+        votepopover.click();
+      }
+      setTimeout("voteclick()", 2000);
+      //自动点击来弹出提示框，但audio在chrome没有生效，但在移动端可以，但会很卡；
     </script>
   </body>
 </html>
