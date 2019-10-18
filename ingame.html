@@ -17,315 +17,284 @@
     <meta name="format-detection" content="telephone=no,email=no" />
     <meta name="msapplication-tap-highlight" content="no" />
 
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="../WebApp/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../WebApp/sass/main.css" />
   </head>
 
   <body ontouchstart>
-    <header class="navbar navbar-fixed-top navbar-default" id="vote_navbar">
-      <span class="tittle text-center">投票</span>
+    <header class="header">
       <!--为避免影响覆盖图标按钮而点击不了，后面会叠加在上面-->
-      <article class="dropdown">
-        <button
-          type="button"
-          class="btn dropdown-toggle"
-          data-toggle="dropdown"
-        >
-          <span class="glyphicon glyphicon-list-alt"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li class="text-center">战绩</li>
-          <li class="text-center">积分</li>
-        </ul>
-      </article>
-      <article class="text-right">
-        <button type="button" class="btn">
-          <a class="glyphicon glyphicon-remove" href="index.html"></a>
-        </button>
-      </article>
+      <button class="header-btn-left" type="button" data-toggle="dropdown">
+        <span class="glyphicon glyphicon-list-alt"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li class="dropdown-item">战绩</li>
+        <li class="dropdown-item">积分</li>
+      </ul>
+
+      <h1 class="header-title">投票</h1>
+
+      <button class="header-btn-right" type="button">
+        <a class="glyphicon glyphicon-remove" href="index.html"></a>
+      </button>
     </header>
     <!--标题栏或导航栏-->
 
-    <main id="vote">
-      <form action="result.html" method="get">
-        <section class="container">
-          <span
-            id="votepopover"
-            title=" "
-            data-container="main"
-            data-toggle="popover"
-            data-placement="top"
-            data-content="发言讨论结束，大家请投票"
-            onclick="playPause()"
-          >
-            点击聆听
-            <a class="glyphicon glyphicon-play-circle"></a>
-            得票数最多人的头像发言
-          </span>
+    <main class="main-ingame container">
+      <article class="popover-msg">
+        <span
+          id="votepopover"
+          data-container="main"
+          data-toggle="popover"
+          data-placement="top"
+          data-content="发言讨论结束，大家请投票"
+          onclick="playPause()"
+        >
+          点击聆听得票数最多人的头像发言
+        </span>
 
-          <audio id="votebgm" src="../WebApp/audio/财富自由.mp3" loop="loop">
-            亲 您的浏览器不支持html5的audio标签
-          </audio>
-        </section>
-        <!--提示弹出框区，及其打开和音频播放暂停的控制-->
+        <audio id="votebgm" src="../WebApp/audio/财富自由.mp3" loop="loop">
+          亲 您的浏览器不支持html5的audio标签
+        </audio>
+      </article>
+      <!--提示弹出框区，及其打开和音频播放暂停的控制-->
 
-        <section class="container">
-          <div class="row">
-            <div class="col-xs-4">
-              <input
-                type="radio"
-                name="vote_sel"
-                id="vote_sel1"
-                class="vote_sel"
-              />
-              <label for="vote_sel1" class="sculpture">
-                <span class="label label-danger">3</span>
-                <p class="name text-center">水民</p>
-                <p class="numb text-center">1号</p>
-              </label>
-              <div class="btn-group">
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-              </div>
-            </div>
-
-            <div class="col-xs-4">
-              <input
-                type="radio"
-                name="vote_sel"
-                id="vote_sel2"
-                class="vote_sel"
-              />
-              <label for="vote_sel2" class="sculpture">
-                <span class="label label-danger">1</span>
-                <p class="name text-center">水民</p>
-                <p class="numb text-center">2号</p>
-              </label>
-              <div class="btn-group">
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-              </div>
-            </div>
-
-            <div class="col-xs-4">
-              <input
-                type="radio"
-                name="vote_sel"
-                id="vote_sel3"
-                class="vote_sel"
-              />
-              <label for="vote_sel3" class="sculpture">
-                <span class="label label-danger">0</span>
-                <p class="name text-center">警察</p>
-                <p class="numb text-center">3号</p>
-              </label>
-              <div class="btn-group">
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-              </div>
+      <form class="form-ingame" action="result.html" method="get">
+        <section class="row .no-gutters">
+          <div class="form-group-ingame col-xs-4 col-6">
+            <input
+              class="form-check-input"
+              id="vote-sel1"
+              name="vote-sel"
+              type="radio"
+            />
+            <label for="vote-sel1" class="form-check-label">
+              <span class="form-check-label-name">水民</span>
+              <span class="form-check-label-numb">1号</span>
+            </label>
+            <div class="form-btn-group">
+              <button class="form-btn-1" type="button"></button>
+              <button class="form-btn-2" type="button"></button>
+              <button class="form-btn-3" type="button"></button>
+              <button class="form-btn-4" type="button"></button>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-xs-4">
-              <input
-                type="radio"
-                name="vote_sel"
-                id="vote_sel4"
-                class="vote_sel"
-              />
-              <label for="vote_sel4" class="sculpture">
-                <span class="label label-danger">0</span>
-                <p class="name text-center">法官</p>
-                <p class="numb text-center">4号</p>
-              </label>
-              <div class="btn-group">
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-              </div>
-            </div>
-
-            <div class="col-xs-4">
-              <input
-                type="radio"
-                name="vote_sel"
-                id="vote_sel5"
-                class="vote_sel"
-              />
-              <label for="vote_sel5" class="sculpture">
-                <span class="label label-danger">1</span>
-                <p class="name text-center">狙击手</p>
-                <p class="numb text-center">5号</p>
-              </label>
-              <div class="btn-group">
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-              </div>
-            </div>
-
-            <div class="col-xs-4">
-              <input
-                type="radio"
-                name="vote_sel"
-                id="vote_sel6"
-                class="vote_sel"
-              />
-              <label for="vote_sel6" class="sculpture">
-                <span class="label label-danger">0</span>
-                <p class="name text-center">医生</p>
-                <p class="numb text-center">6号</p>
-              </label>
-              <div class="btn-group">
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-              </div>
+          <div class="form-group-ingame col-xs-4 col-6">
+            <input
+              class="form-check-input"
+              id="vote-sel2"
+              name="vote-sel"
+              type="radio"
+            />
+            <label for="vote-sel2" class="form-check-label">
+              <span class="form-check-label-name">水民</span>
+              <span class="form-check-label-numb">2号</span>
+            </label>
+            <div class="form-btn-group">
+              <button class="form-btn-1" type="button"></button>
+              <button class="form-btn-2" type="button"></button>
+              <button class="form-btn-3" type="button"></button>
+              <button class="form-btn-4" type="button"></button>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-xs-4">
-              <input
-                type="radio"
-                name="vote_sel"
-                id="vote_sel7"
-                class="vote_sel"
-              />
-              <label for="vote_sel7" class="sculpture">
-                <span class="label label-danger">4</span>
-                <p class="name text-center">杀手</p>
-                <p class="numb text-center">7号</p>
-              </label>
-              <div class="btn-group">
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-              </div>
-            </div>
-
-            <div class="col-xs-4">
-              <input
-                type="radio"
-                name="vote_sel"
-                id="vote_sel8"
-                class="vote_sel"
-              />
-              <label for="vote_sel8" class="sculpture">
-                <span class="label label-danger">0</span>
-                <p class="name text-center">水民</p>
-                <p class="numb text-center">8号</p>
-              </label>
-              <div class="btn-group">
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-              </div>
-            </div>
-
-            <div class="col-xs-4">
-              <input
-                type="radio"
-                name="vote_sel"
-                id="vote_sel9"
-                class="vote_sel"
-              />
-              <label for="vote_sel9" class="sculpture">
-                <span class="label label-danger">0</span>
-                <p class="name text-center">水民</p>
-                <p class="numb text-center">9号</p>
-              </label>
-              <div class="btn-group">
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-              </div>
+          <div class="form-group-ingame col-xs-4 col-6">
+            <input
+              class="form-check-input"
+              id="vote-sel3"
+              name="vote-sel"
+              type="radio"
+            />
+            <label for="vote-sel3" class="form-check-label">
+              <span class="form-check-label-name">警察</span>
+              <span class="form-check-label-numb">3号</span>
+            </label>
+            <div class="form-btn-group">
+              <button class="form-btn-1" type="button"></button>
+              <button class="form-btn-2" type="button"></button>
+              <button class="form-btn-3" type="button"></button>
+              <button class="form-btn-4" type="button"></button>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-xs-4">
-              <input
-                type="radio"
-                name="vote_sel"
-                id="vote_sel10"
-                class="vote_sel"
-              />
-              <label for="vote_sel10" class="sculpture">
-                <span class="label label-danger">0</span>
-                <p class="name text-center">水民</p>
-                <p class="numb text-center">10号</p>
-              </label>
-              <div class="btn-group">
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-              </div>
+          <div class="form-group-ingame col-xs-4 col-6">
+            <input
+              class="form-check-input"
+              id="vote-sel4"
+              name="vote-sel"
+              type="radio"
+            />
+            <label for="vote-sel4" class="form-check-label">
+              <span class="form-check-label-name">法官</span>
+              <span class="form-check-label-numb">4号</span>
+            </label>
+            <div class="form-btn-group">
+              <button class="form-btn-1" type="button"></button>
+              <button class="form-btn-2" type="button"></button>
+              <button class="form-btn-3" type="button"></button>
+              <button class="form-btn-4" type="button"></button>
             </div>
+          </div>
 
-            <div class="col-xs-4">
-              <input
-                type="radio"
-                name="vote_sel"
-                id="vote_sel11"
-                class="vote_sel"
-              />
-              <label for="vote_sel11" class="sculpture">
-                <span class="label label-danger">1</span>
-                <p class="name text-center">水民</p>
-                <p class="numb text-center">11号</p>
-              </label>
-              <div class="btn-group">
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-              </div>
+          <div class="form-group-ingame col-xs-4 col-6">
+            <input
+              class="form-check-input"
+              id="vote-sel5"
+              name="vote-sel"
+              type="radio"
+            />
+            <label for="vote-sel5" class="form-check-label">
+              <span class="form-check-label-name">狙击手</span>
+              <span class="form-check-label-numb">5号</span>
+            </label>
+            <div class="form-btn-group">
+              <button class="form-btn-1" type="button"></button>
+              <button class="form-btn-2" type="button"></button>
+              <button class="form-btn-3" type="button"></button>
+              <button class="form-btn-4" type="button"></button>
             </div>
+          </div>
 
-            <div class="col-xs-4">
-              <input
-                type="radio"
-                name="vote_sel"
-                id="vote_sel12"
-                class="vote_sel"
-              />
-              <label for="vote_sel12" class="sculpture">
-                <span class="label label-danger">0</span>
-                <p class="name text-center">警察</p>
-                <p class="numb text-center">12号</p>
-              </label>
-              <div class="btn-group">
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-                <button type="button" class="btn"></button>
-              </div>
+          <div class="form-group-ingame col-xs-4 col-6">
+            <input
+              class="form-check-input"
+              id="vote-sel6"
+              name="vote-sel"
+              type="radio"
+            />
+            <label for="vote-sel6" class="form-check-label">
+              <span class="form-check-label-name">医生</span>
+              <span class="form-check-label-numb">6号</span>
+            </label>
+            <div class="form-btn-group">
+              <button class="form-btn-1" type="button"></button>
+              <button class="form-btn-2" type="button"></button>
+              <button class="form-btn-3" type="button"></button>
+              <button class="form-btn-4" type="button"></button>
+            </div>
+          </div>
+
+          <div class="form-group-ingame col-xs-4 col-6">
+            <input
+              class="form-check-input"
+              id="vote-sel7"
+              name="vote-sel"
+              type="radio"
+            />
+            <label for="vote-sel7" class="form-check-label">
+              <span class="form-check-label-name">杀手</span>
+              <span class="form-check-label-numb">7号</span>
+            </label>
+            <div class="form-btn-group">
+              <button class="form-btn-1" type="button"></button>
+              <button class="form-btn-2" type="button"></button>
+              <button class="form-btn-3" type="button"></button>
+              <button class="form-btn-4" type="button"></button>
+            </div>
+          </div>
+
+          <div class="form-group-ingame col-xs-4 col-6">
+            <input
+              class="form-check-input"
+              id="vote-sel8"
+              name="vote-sel"
+              type="radio"
+            />
+            <label for="vote-sel8" class="form-check-label">
+              <span class="form-check-label-name">水民</span>
+              <span class="form-check-label-numb">8号</span>
+            </label>
+            <div class="form-btn-group">
+              <button class="form-btn-1" type="button"></button>
+              <button class="form-btn-2" type="button"></button>
+              <button class="form-btn-3" type="button"></button>
+              <button class="form-btn-4" type="button"></button>
+            </div>
+          </div>
+
+          <div class="form-group-ingame col-xs-4 col-6">
+            <input
+              class="form-check-input"
+              id="vote-sel9"
+              name="vote-sel"
+              type="radio"
+            />
+            <label for="vote-sel9" class="form-check-label">
+              <span class="form-check-label-name">水民</span>
+              <span class="form-check-label-numb">9号</span>
+            </label>
+            <div class="form-btn-group">
+              <button class="form-btn-1" type="button"></button>
+              <button class="form-btn-2" type="button"></button>
+              <button class="form-btn-3" type="button"></button>
+              <button class="form-btn-4" type="button"></button>
+            </div>
+          </div>
+
+          <div class="form-group-ingame col-xs-4 col-6">
+            <input
+              class="form-check-input"
+              id="vote-sel10"
+              name="vote-sel"
+              type="radio"
+            />
+            <label for="vote-sel10" class="form-check-label">
+              <span class="form-check-label-name">警察</span>
+              <span class="form-check-label-numb">10号</span>
+            </label>
+            <div class="form-btn-group">
+              <button class="form-btn-1" type="button"></button>
+              <button class="form-btn-2" type="button"></button>
+              <button class="form-btn-3" type="button"></button>
+              <button class="form-btn-4" type="button"></button>
+            </div>
+          </div>
+
+          <div class="form-group-ingame col-xs-4 col-6">
+            <input
+              class="form-check-input"
+              id="vote-sel11"
+              name="vote-sel"
+              type="radio"
+            />
+            <label for="vote-sel11" class="form-check-label">
+              <span class="form-check-label-name">水民</span>
+              <span class="form-check-label-numb">11号</span>
+            </label>
+            <div class="form-btn-group">
+              <button class="form-btn-1" type="button"></button>
+              <button class="form-btn-2" type="button"></button>
+              <button class="form-btn-3" type="button"></button>
+              <button class="form-btn-4" type="button"></button>
+            </div>
+          </div>
+
+          <div class="form-group-ingame col-xs-4 col-6">
+            <input
+              class="form-check-input"
+              id="vote-sel12"
+              name="vote-sel"
+              type="radio"
+            />
+            <label for="vote-sel12" class="form-check-label">
+              <span class="form-check-label-name">水民</span>
+              <span class="form-check-label-numb">12号</span>
+            </label>
+            <div class="form-btn-group">
+              <button class="form-btn-1" type="button"></button>
+              <button class="form-btn-2" type="button"></button>
+              <button class="form-btn-3" type="button"></button>
+              <button class="form-btn-4" type="button"></button>
             </div>
           </div>
         </section>
         <!--投票头像选择区-->
 
         <footer
-          class="navbar navbar-default navbar-fixed-bottom"
-          id="vote_tabbar"
+          class="footer-ingame container"
         >
-          <div class="divider">
-            <button type="submit" class="btn btn-block">
+          <div class="footer-ingame-divider">
+            <button class="footer-ingame-btn" type="submit">
               投死
             </button>
           </div>
@@ -334,8 +303,10 @@
       </form>
     </main>
 
-    <script src="../WebApp/bootstrap/jquery.min.js"></script>
-    <script src="../WebApp/bootstrap/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
     <script>
       $(function() {
         $('[data-toggle="popover"]').popover();

@@ -17,133 +17,224 @@
     <meta name="format-detection" content="telephone=no,email=no" />
     <meta name="msapplication-tap-highlight" content="no" />
 
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="../WebApp/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../WebApp/sass/main.css" />
   </head>
 
   <body ontouchstart>
-    <header class="navbar navbar-fixed-top navbar-default">
-      <article class="dropdown">
-        <button
-          type="button"
-          class="btn dropdown-toggle"
-          data-toggle="dropdown"
-        >
-          <span class="glyphicon glyphicon-menu-hamburger"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li class="text-center">设置</li>
-          <li class="text-center">关于</li>
-        </ul>
-      </article>
-      
+    <header class="header">
+      <button type="button" class="header-btn-left" data-toggle="dropdown">
+        <span class="glyphicon glyphicon-menu-hamburger"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li class="dropdown-item">设置</li>
+        <li class="dropdown-item">关于</li>
+      </ul>
     </header>
     <!--标题栏或导航栏-->
 
-    <main id="game_entrance">
-      <article>
-        <section class="panel" id="last_game">
-          <a type="button" class="btn btn-block" href="result.html">
-            <span class="text">上次游戏：捉鬼猜词版</span>
-            <span class="glyphicon glyphicon-chevron-right"></span>
-          </a>
-        </section>
-        <!--“上次游戏”板块-->
+    <main class="main-home container">
+      <a class="lastgame-btn" type="button" href="result.html">
+        <span class="lastgame-text">上次游戏：捉鬼猜词版</span>
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+      <!--“上次游戏”板块-->
 
-        <section class="panel carousel slide" id="sel_game">
-          <ol class="carousel-indicators">
-            <li data-target="#sel_game" data-slide-to="0" class="active"></li>
-            <li data-target="#sel_game" data-slide-to="1"></li>
-            <li data-target="#sel_game" data-slide-to="2"></li>
-            <li data-target="#sel_game" data-slide-to="3"></li>
-          </ol>
-          <!--“捉鬼游戏”板块轮播计数器-->
+      <article class="carousel slide" id="sel-game" data-interval="false">
+        <ol class="carousel-indicators list-unstyled">
+          <li data-target="#sel-game" data-slide-to="0" class="active"></li>
+          <li data-target="#sel-game" data-slide-to="1"></li>
+          <li data-target="#sel-game" data-slide-to="2"></li>
+          <li data-target="#sel-game" data-slide-to="3"></li>
+        </ol>
+        <!--“捉鬼游戏”板块轮播计数器-->
 
-          <div class="carousel-inner">
-            <div class="item active">
-              <div class="panel-heading text-center">
-                捉鬼游戏
+        <section class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="carousel-caption">
+              <div class="carousel-caption-header">
+                <span class="carousel-caption-header-text">捉鬼游戏</span>
               </div>
               <!--“捉鬼游戏”板块头部-->
 
-              <div class="divider"></div>
-              <!--“捉鬼游戏”板块分隔线-->
+              <div class="carousel-caption-body">
+                <div class="nextgame">
+                  <a class="nextgame-btn" type="button" href="ingame.html">
+                    <span class="nextgame-btn-text">
+                      简化版
+                    </span>
+                  </a>
+                  <p class="nextgame-info-text">
+                    有1133个用户正在玩此款游戏
+                  </p>
+                </div>
 
-              <div class="panel-body">
-                <ul class="list-group list-unstyled">
-                  <li class="list-group-items">
-                    <button
-                      class="btn btn-block btn-primary list-group-item-heading"
-                      type="button">
-                      <a type="button" class="btn btn-block" href="ingame.html">
-                        简化版
-                      </a>
-
-                    </button>
-                    <p class="list-group-item-text text-center">
-                      有1133个用户正在玩此款游戏
-                    </p>
-                  </li>
-
-                  <li class="list-group-items">
-                    <button
-                      class="btn btn-block btn-primary list-group-item-heading"
-                      type="button">
+                <div class="nextgame">
+                  <a class="nextgame-btn" type="button" href="ingame.html">
+                    <span class="nextgame-btn-text">
                       猜词版
-                    </button>
-                    <p class="list-group-item-text text-center">
-                      有1133个用户正在玩此款游戏
-                    </p>
-                  </li>
+                    </span>
+                  </a>
+                  <p class="nextgame-info-text">
+                    有1133个用户正在玩此款游戏
+                  </p>
+                </div>
 
-                  <li class="list-group-items">
-                    <button
-                      class="btn btn-block btn-primary list-group-item-heading"
-                      type="button">
+                <div class="nextgame">
+                  <a class="nextgame-btn" type="button" href="ingame.html">
+                    <span class="nextgame-btn-text">
                       白痴版
-                    </button>
-                    <p class="list-group-item-text text-center">
-                      有1133个用户正在玩此款游戏
-                    </p>
-                  </li>
-                </ul>
+                    </span>
+                  </a>
+                  <p class="nextgame-info-text">
+                    有1133个用户正在玩此款游戏
+                  </p>
+                </div>
               </div>
             </div>
+          </div>
 
-            <div class="item">
-                <div class="panel-heading text-center">
-                    谁是卧底
+          <div class="carousel-item">
+            <div class="carousel-caption">
+              <div class="carousel-caption-header">
+                <span class="carousel-caption-header-text">谁是卧底</span>
+              </div>
+              <!--“捉鬼游戏”板块头部-->
+
+              <div class="carousel-caption-body">
+                <div class="nextgame">
+                  <a class="nextgame-btn" type="button" href="ingame.html">
+                    <span class="nextgame-btn-text">
+                      简化版
+                    </span>
+                  </a>
+                  <p class="nextgame-info-text">
+                    有1133个用户正在玩此款游戏
+                  </p>
                 </div>
-                <div class="divider"></div>
-                <div class="panel-body"></div>
-            </div>
-            <div class="item">
-                <div class="panel-heading text-center">
-                    狼人游戏
+
+                <div class="nextgame">
+                  <a class="nextgame-btn" type="button" href="ingame.html">
+                    <span class="nextgame-btn-text">
+                      猜词版
+                    </span>
+                  </a>
+                  <p class="nextgame-info-text">
+                    有1133个用户正在玩此款游戏
+                  </p>
                 </div>
-                <div class="divider"></div>
-                <div class="panel-body"></div>
-            </div>
-            <div class="item">
-                <div class="panel-heading text-center">
-                    炸狼堡
+
+                <div class="nextgame">
+                  <a class="nextgame-btn" type="button" href="ingame.html">
+                    <span class="nextgame-btn-text">
+                      白痴版
+                    </span>
+                  </a>
+                  <p class="nextgame-info-text">
+                    有1133个用户正在玩此款游戏
+                  </p>
                 </div>
-                <div class="divider"></div>
-                <div class="panel-body"></div>
+              </div>
             </div>
           </div>
-          <!--“捉鬼游戏”板块轮播内容-->
+          <div class="carousel-item">
+            <div class="carousel-caption">
+              <div class="carousel-caption-header">
+                <span class="carousel-caption-header-text">杀人游戏</span>
+              </div>
+              <!--“捉鬼游戏”板块头部-->
 
-          <a class="carousel-control right" href="#sel_game" data-slide="next">
-          <span class="glyphicon glyphicon-triangle-right"></span>
-          </a>
-          <!--“捉鬼游戏”板块翻页-->
+              <div class="carousel-caption-body">
+                <div class="nextgame">
+                  <a class="nextgame-btn" type="button" href="ingame.html">
+                    <span class="nextgame-btn-text">
+                      简化版
+                    </span>
+                  </a>
+                  <p class="nextgame-info-text">
+                    有1133个用户正在玩此款游戏
+                  </p>
+                </div>
+
+                <div class="nextgame">
+                  <a class="nextgame-btn" type="button" href="ingame.html">
+                    <span class="nextgame-btn-text">
+                      猜词版
+                    </span>
+                  </a>
+                  <p class="nextgame-info-text">
+                    有1133个用户正在玩此款游戏
+                  </p>
+                </div>
+
+                <div class="nextgame">
+                  <a class="nextgame-btn" type="button" href="ingame.html">
+                    <span class="nextgame-btn-text">
+                      白痴版
+                    </span>
+                  </a>
+                  <p class="nextgame-info-text">
+                    有1133个用户正在玩此款游戏
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-caption">
+              <div class="carousel-caption-header">
+                <span class="carousel-caption-header-text">炸狼堡</span>
+              </div>
+              <!--“捉鬼游戏”板块头部-->
+
+              <div class="carousel-caption-body">
+                <div class="nextgame">
+                  <a class="nextgame-btn" type="button" href="ingame.html">
+                    <span class="nextgame-btn-text">
+                      简化版
+                    </span>
+                  </a>
+                  <p class="nextgame-info-text">
+                    有1133个用户正在玩此款游戏
+                  </p>
+                </div>
+
+                <div class="nextgame">
+                  <a class="nextgame-btn" type="button" href="ingame.html">
+                    <span class="nextgame-btn-text">
+                      猜词版
+                    </span>
+                  </a>
+                  <p class="nextgame-info-text">
+                    有1133个用户正在玩此款游戏
+                  </p>
+                </div>
+
+                <div class="nextgame">
+                  <a class="nextgame-btn" type="button" href="ingame.html">
+                    <span class="nextgame-btn-text">
+                      白痴版
+                    </span>
+                  </a>
+                  <p class="nextgame-info-text">
+                    有1133个用户正在玩此款游戏
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
+        <!--“捉鬼游戏”板块轮播内容-->
+
+        <a class="carousel-control-next right" href="#sel-game" data-slide="next">
+          <span class="glyphicon glyphicon-triangle-right"></span>
+        </a>
+        <!--“捉鬼游戏”板块翻页-->
       </article>
-        <!--“捉鬼游戏”板块-->
+      <!--“捉鬼游戏”板块-->
     </main>
 
-    <script src="../WebApp/bootstrap/jquery.min.js"></script>
-    <script src="../WebApp/bootstrap/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </body>
 </html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>桌游精灵</title>
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="format-detection" content="telephone=no,email=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="../WebApp/bootstrap/bootstrap.min.css" />
+  </head>
+
+  <body ontouchstart>
+    <header class="navbar navbar-fixed-top navbar-default" id="vote_navbar">
+      <span class="tittle text-center">投票</span>
+      <!--为避免影响覆盖图标按钮而点击不了，后面会叠加在上面-->
+      <article class="dropdown">
+        <button
+          type="button"
+          class="btn dropdown-toggle"
+          data-toggle="dropdown"
+        >
+          <span class="glyphicon glyphicon-list-alt"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li class="text-center">战绩</li>
+          <li class="text-center">积分</li>
+        </ul>
+      </article>
+      <article class="text-right">
+        <button type="button" class="btn">
+          <a class="glyphicon glyphicon-remove" href="index.html"></a>
+        </button>
+      </article>
+    </header>
+    <!--标题栏或导航栏-->
+
+    <main id="vote">
+      <form action="result.html" method="get">
+        <section class="container">
+          <span
+            id="votepopover"
+            title=" "
+            data-container="main"
+            data-toggle="popover"
+            data-placement="top"
+            data-content="发言讨论结束，大家请投票"
+            onclick="playPause()"
+          >
+            点击聆听
+            <a class="glyphicon glyphicon-play-circle"></a>
+            得票数最多人的头像发言
+          </span>
+
+          <audio id="votebgm" src="../WebApp/audio/财富自由.mp3" loop="loop">
+            亲 您的浏览器不支持html5的audio标签
+          </audio>
+        </section>
+        <!--提示弹出框区，及其打开和音频播放暂停的控制-->
+
+        <section class="container">
+          <div class="row">
+            <div class="col-xs-4">
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel1"
+                class="vote_sel"
+              />
+              <label for="vote_sel1" class="sculpture">
+                <span class="label label-danger">3</span>
+                <p class="name text-center">水民</p>
+                <p class="numb text-center">1号</p>
+              </label>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
+            </div>
+
+            <div class="col-xs-4">
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel2"
+                class="vote_sel"
+              />
+              <label for="vote_sel2" class="sculpture">
+                <span class="label label-danger">1</span>
+                <p class="name text-center">水民</p>
+                <p class="numb text-center">2号</p>
+              </label>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
+            </div>
+
+            <div class="col-xs-4">
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel3"
+                class="vote_sel"
+              />
+              <label for="vote_sel3" class="sculpture">
+                <span class="label label-danger">0</span>
+                <p class="name text-center">警察</p>
+                <p class="numb text-center">3号</p>
+              </label>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-4">
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel4"
+                class="vote_sel"
+              />
+              <label for="vote_sel4" class="sculpture">
+                <span class="label label-danger">0</span>
+                <p class="name text-center">法官</p>
+                <p class="numb text-center">4号</p>
+              </label>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
+            </div>
+
+            <div class="col-xs-4">
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel5"
+                class="vote_sel"
+              />
+              <label for="vote_sel5" class="sculpture">
+                <span class="label label-danger">1</span>
+                <p class="name text-center">狙击手</p>
+                <p class="numb text-center">5号</p>
+              </label>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
+            </div>
+
+            <div class="col-xs-4">
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel6"
+                class="vote_sel"
+              />
+              <label for="vote_sel6" class="sculpture">
+                <span class="label label-danger">0</span>
+                <p class="name text-center">医生</p>
+                <p class="numb text-center">6号</p>
+              </label>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-4">
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel7"
+                class="vote_sel"
+              />
+              <label for="vote_sel7" class="sculpture">
+                <span class="label label-danger">4</span>
+                <p class="name text-center">杀手</p>
+                <p class="numb text-center">7号</p>
+              </label>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
+            </div>
+
+            <div class="col-xs-4">
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel8"
+                class="vote_sel"
+              />
+              <label for="vote_sel8" class="sculpture">
+                <span class="label label-danger">0</span>
+                <p class="name text-center">水民</p>
+                <p class="numb text-center">8号</p>
+              </label>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
+            </div>
+
+            <div class="col-xs-4">
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel9"
+                class="vote_sel"
+              />
+              <label for="vote_sel9" class="sculpture">
+                <span class="label label-danger">0</span>
+                <p class="name text-center">水民</p>
+                <p class="numb text-center">9号</p>
+              </label>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-4">
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel10"
+                class="vote_sel"
+              />
+              <label for="vote_sel10" class="sculpture">
+                <span class="label label-danger">0</span>
+                <p class="name text-center">水民</p>
+                <p class="numb text-center">10号</p>
+              </label>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
+            </div>
+
+            <div class="col-xs-4">
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel11"
+                class="vote_sel"
+              />
+              <label for="vote_sel11" class="sculpture">
+                <span class="label label-danger">1</span>
+                <p class="name text-center">水民</p>
+                <p class="numb text-center">11号</p>
+              </label>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
+            </div>
+
+            <div class="col-xs-4">
+              <input
+                type="radio"
+                name="vote_sel"
+                id="vote_sel12"
+                class="vote_sel"
+              />
+              <label for="vote_sel12" class="sculpture">
+                <span class="label label-danger">0</span>
+                <p class="name text-center">警察</p>
+                <p class="numb text-center">12号</p>
+              </label>
+              <div class="btn-group">
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+                <button type="button" class="btn"></button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--投票头像选择区-->
+
+        <footer
+          class="navbar navbar-default navbar-fixed-bottom"
+          id="vote_tabbar"
+        >
+          <div class="divider">
+            <button type="submit" class="btn btn-block">
+              投死
+            </button>
+          </div>
+        </footer>
+        <!--投票提交区-->
+      </form>
+    </main>
+
+
+    <script src="../WebApp/bootstrap/jquery.min.js"></script>
+    <script src="../WebApp/bootstrap/bootstrap.min.js"></script>
+    <script>
+      $(function() {
+        $('[data-toggle="popover"]').popover();
+      }); //弹出提示框的触发条件
+
+      var votebgm = document.getElementById("votebgm");
+      function playPause() {
+        if (votebgm.paused) {
+          votebgm.play();
+        } else {
+          votebgm.pause();
+        }
+      } //背景音乐的播放与暂停
+
+      var votepopover = document.getElementById("votepopover");
+      function voteclick() {
+        votepopover.click();
+      }
+      setTimeout("voteclick()", 2000);
+      //自动点击来弹出提示框，但audio在chrome没有生效，但在移动端可以，但会很卡；
+    </script>
+  </body>
+</html>

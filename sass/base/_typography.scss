@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "HiraginoSansGBW3";
+  src: url("../fonts/HiraginoSansGBW3/HiraginoSansGBW3.otf") format("opentype"),
+    url("../fonts/HiraginoSansGBW3/HiraginoSansGBW3.woff2") format("woff2"),
+    url("../fonts/HiraginoSansGBW3/HiraginoSansGBW3.woff") format("woff"),
+    url("../fonts/HiraginoSansGBW3/HiraginoSansGBW3.ttf") format("truetype"),
+    url("../fonts/HiraginoSansGBW3/HiraginoSansGBW3.eot")
+      format("embedded-opentype"),
+    url("../fonts/HiraginoSansGBW3/HiraginoSansGBW3.svg") format("svg");
+} /* 引用设计字体 */
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+// 定义全局字体、行高以及高光颜色
+
+body {
+  font: {
+    family: "HiraginoSansGBW3", "Microsoft YaHei", sans-serif;
+    size: 0.625rem;
+    weight: 500;
+  }
+  line-height: 1.5;
+}
+// 定义body标签下的全局字体样式
+
+@each $font-bp in $bp-keys-list {
+  body {
+    @include respond-to($font-bp) {
+      $i: index($bp-keys-list, $font-bp);
+      font-size: 0.625rem + 0.125 * ($i - 1);
+    }
+  }
+}
+// 定义body标签在不同断点下的字体大小
+
+@for $h-numb from 1 to 6 {
+  h#{$h-numb} {
+    font-size: 1.9em - (0.2 * $h-numb);
+  }
+}
+// 定义h1~h6的文字大小
+@mixin fs-($f-numb) {
+  font-size: 1.9em - (0.2 * $f-numb);
+}
+// 定义font的1~6等级的文字大小
+p {
+  font-size: 1.3em;
+}
+// 定义正文的文字大小
+$font-info: 1.2em;
+// 定义通知信息的文字大小
+$font-sm-btn: 1.6em;
+// 定义链接按钮的文字大小
+$font-lg-btn: 2em;
+// 定义底部按钮的文字大小

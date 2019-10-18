@@ -1,0 +1,71 @@
+@charset "utf-8";
+// 每个scss文件都要在首行加上，否则中文会编译出错
+
+/*!
+sass/
+|
+|– abstracts/
+|   |– _variables.scss    # Sass Variables
+|   |– _mixins.scss       # Sass Mixins
+|   |– _placeholder.scss  # Sass Placeholder
+|
+|– base/
+|   |– _reset.scss        # Reset
+|   |– _typography.scss   # Typography rules
+|   |– _colors.scss       # Colors' type
+|
+|– components/
+|   |– _buttons.scss      # Buttons
+|   |– _carousel.scss     # Carousel
+|   |– _list.scss         # List-group
+|   |– _modal.scss        # Modal
+|   |– _dropdown.scss     # Dropdown
+|   |– _popover.scss      # Popover
+|   |– _forms.scss        # Form & input
+|
+|– layout/
+|   |– _grid.scss         # Grid system
+|   |– _header.scss       # Header
+|   |– _main.scss         # Main
+|   |– _header.scss       # Header
+|   |– _footer.scss       # Footer
+|
+|– pages/
+|   |– _home.scss         # Home specific styles
+|
+|– vendors/
+|   |– _normalize.scss    # normalize
+|   |– _iosSelect.scss    # isoSelect
+|
+`– main.scss              # Main Sass file
+*/
+
+@import
+  "abstracts/mixins",
+  "abstracts/variables",
+  "abstracts/placeholder";
+
+@import
+  "vendors/normalize",
+  "vendors/glyphicons";
+
+@import
+  "base/reset",
+  "base/typography",
+  "base/colors";
+
+@import
+  "layout/grid",
+  "layout/header",
+  "layout/main",
+  "layout/footer",
+  "layout/form";
+
+@import
+  "components/buttons",
+  "components/carousel",
+  "components/list",
+  "components/modal",
+  "components/dropdown",
+  "components/popover",
+  "components/forms";

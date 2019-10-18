@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+.form-group-ingame {
+  @include flex-column;
+  @include flex-align-center;
+
+  & .form-check-label {
+    @include flex-column;
+
+    width: 6.6em;
+    height: 6.6em;
+
+    background-color: $color-label-bg;
+    border: 0.3em solid $color-light;
+    cursor: pointer;
+
+    &-name {
+      @include flex-center;
+      width: 100%;
+      height: 3.2em;
+
+      @include fs-(2);
+      color: $color-label-name-text;
+    }
+    &-numb {
+      @include flex-center;
+      flex: 1;
+      width: 100%;
+
+      @include fs-(4);
+      color: $color-light;
+      background-color: $color-label-numb-bg;
+    }
+
+    &:hover {
+      border-color: $color-secondary;
+      & + .form-btn-group {
+        visibility: visible;
+      }
+    }
+  } // 定义表单的展示文本及背景颜色
+
+  & .form-btn-group {
+    margin: 1em 0;
+    @include flex-align-center;
+    justify-content: space-between;
+    width: 6.6em;
+    visibility: hidden;
+
+    & .form-btn {
+      width: 1.5em;
+      height: 1.5em;
+
+      background-image: url(../img/btn-sprite@3x.png);
+      background-size: cover;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+    & .form-btn-1 {
+      @extend .form-btn;
+      background-position: 0 0;
+    }
+    & .form-btn-2 {
+      @extend .form-btn;
+      background-position: -1.75em 0;
+    }
+    & .form-btn-3 {
+      @extend .form-btn;
+      background-position: -3.35em 0;
+    }
+    & .form-btn-4 {
+      @extend .form-btn;
+      background-position: -4.95em 0;
+    }
+  } // 定义按钮组的雪碧图
+
+  & .form-check-input {
+    display: none;
+
+    &:checked + .form-check-label {
+      border-color: $color-secondary;
+    }
+    &:checked ~ .form-btn-group {
+      visibility: visible;
+    }
+  } // 隐藏表单中的单选框，并且定义单选框选中时的动画状态
+}
+//

@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+// 以下为基本类型颜色
+$color-bg: #F0F0F0;
+// 背景颜色
+$color-primary: #29BDE0;
+// 主要颜色
+$color-secondary: #FBB435;
+// 次要颜色
+$color-remove: #F66F6F;
+// 取消颜色
+$color-light: #FFF;
+// 明亮颜色
+
+
+// 以下为基本文字颜色
+$color-title: #9A9A9A;
+// 题目文字颜色
+$color-text: #787878;
+// 正文文字颜色
+$color-list-title: #515151;
+// 列表标题文字颜色
+$color-list-text: #A6A6A6;
+// 列表正文文字颜色
+
+
+// 以下为字体图标颜色
+$color-iconfont: #E7E7E7;
+// 字体图标颜色
+$color-btn-primary: #69D1E9;
+// 主要按钮颜色
+
+
+// 以下为弹出框组件颜色
+$color-popover-bg: rgba(255, 255, 255, 0.67);
+// 弹出框的弹出信息背景颜色
+$color-popover-text: #464646;
+// 弹出框的弹出信息文字颜色
+
+
+// 以下为表单组件颜色
+$color-label-bg: mix(#FBB435, #F5C97B, 0.5);
+// 定义label的名字背景颜色
+$color-label-name-text: #565656;
+// 定义label的名字文字颜色
+$color-label-numb-bg: rgba(26, 153, 183, 0.52);
+// 定义label的编号背景颜色

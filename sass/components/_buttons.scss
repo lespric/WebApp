@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+.header-btn {
+  padding: 0 1.2em;
+  width: auto;
+  height: 100%;
+  @include flex-center;
+
+  @include btn-hover($color-btn-primary);
+
+  &-left {
+    @extend .header-btn;
+    position: absolute;
+    left: 0;
+  }
+  &-right {
+    @extend .header-btn;
+    position: absolute;
+    right: 0;
+  }
+}
+// 定义顶部的按钮尺寸和布局
+
+.glyphicon {
+  &-menu-hamburger {
+    @include fs-(1);
+    color: $color-light;
+    transform: scaleY(0.8);
+  } // 定义汉堡按钮的大小和颜色
+
+  &-chevron-right {
+    @include absolute-align-center;
+    right: 0.5em;
+
+    font-size: $font-lg-btn;
+    color: $color-iconfont;
+  } // 定义向右按钮的大小和颜色
+
+  &-triangle-right {
+      @include fs-(0);
+      color: $color-secondary;
+      transform: scale(1.5);
+
+      &:active {
+          color: lighten($color-secondary, 20%);
+      }
+  }// 定义右侧翻页按钮的大小、颜色及点击状态
+
+  &-list-alt,
+  &-remove {
+      font-size: $font-lg-btn;
+      color: $color-light;
+  }
+}
+// 定义glyohicon的字体图标颜色和大小
+
+.lastgame {
+  &-btn {
+    position: relative;
+    margin-bottom: 1.4em;
+
+    @include flex-center;
+    width: 100%;
+    height: 5.8em;
+
+    background-color: $color-light;
+    border: 0.1em solid #c9c9c9;
+    @include btn-hover($color-light);
+  }
+  &-text {
+    @include fs-(1);
+    color: $color-title;
+  }
+}
+// 定义上次游戏模块的按钮和文本内容的样式
+
+.nextgame {
+  margin-top: 1.6em;
+
+  &-btn {
+    @include flex-center;
+    width: 100%;
+    height: 6.7em;
+
+    background-color: $color-btn-primary;
+    @include btn-hover($color-btn-primary);
+
+    &-text {
+        font-size: $font-sm-btn;
+        color: $color-light;
+      }
+  }
+
+  &-info-text {
+      margin-bottom: 0;
+      color: $color-text;
+      text-align: center;
+  }
+}
+// 定义捉鬼游戏模块的入口按钮的样式
+
+.footer {
+    &-ingame-btn {
+        width: 100%;
+        height: 2.2em;
+
+        font-size: $font-lg-btn;
+        color: $color-light;
+        background-color: $color-secondary;
+    }
+}
+// 定义ingame页面的底部按钮尺寸和样式

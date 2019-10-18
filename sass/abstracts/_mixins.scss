@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == "string",
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+    + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+// 声明用于检测是否存在媒体查询范围的混合宏
+
+@mixin col-bp {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+// 声明各个断点的col无数字后缀的平分空间效果
+
+@mixin col-auto {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+}
+// 声明各个断点的col-auto的自动填充效果
+
+@mixin row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+// 声明行的通用样式
+
+
+@mixin placeholder-color($ph-font-color) {
+  &::-webkit-input-placeholder {
+    color: $ph-font-color;
+  }
+  &:-moz-placeholder {
+    color: $ph-font-color;
+  }
+  &::-moz-placeholder {
+    color: $ph-font-color;
+  }
+  &:-ms-input-placeholder {
+    color: $ph-font-color;
+  }
+}
+// 声明输入框的提示文字颜色的混合宏
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+// 声明清除浮动的混合宏
+
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+// 声明文本隐藏样式为省略号的混合宏
+
+@mixin flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// 声明flex布局各种类型的混合宏
+
+@mixin width-justify-center($this-width) {
+  width: $this-width;
+  margin: 0 auto;
+}
+// 声明绝对定位的水平居中
+@mixin absolute-justify-center {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+}
+@mixin inline-text-align {
+  display: inline-block;
+}
+// 声明不定宽的块状元素的水平居中
+
+@mixin inline-align-center($this-height) {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: $this-height;
+}
+// 声明不定高行内元素的垂直居中
+@mixin absolute-align-center {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+// 声明绝对定位的垂直居中
+
+@mixin bg-img($img-href...) {
+  background: url($img-href) no-repeat;
+  background-size: $img-width $img-height;
+}
+// 声明引用图片的混合宏
+
+@mixin btn-hover($bg-color) {
+  &:hover {
+    background-color: lighten($bg-color, 20%);
+  }
+}
+// 声明按钮的悬浮状态的混合宏
