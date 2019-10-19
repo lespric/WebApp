@@ -21,14 +21,13 @@ sass/
 |   |– _popover.scss      # Popover
 |   |– _forms.scss        # Form & input
 |   |– _cards.scss        # Cards
-
 |
 |– layout/
 |   |– _body.scss         # Body
 |   |– _grid.scss         # Grid system
 |   |– _header.scss       # Header
 |   |– _main.scss         # Main
- |   |– _footer.scss       # Footer
+|   |– _footer.scss       # Footer
 |   |– _aside.scss        # Aside
 |
 |– vendors/
@@ -1059,7 +1058,8 @@ textarea:focus {
 a,
 a:focus {
   text-decoration: none;
-  color: #FFF; }
+  color: #FFF;
+  cursor: pointer; }
 
 @font-face {
   font-family: "HiraginoSansGBW3";

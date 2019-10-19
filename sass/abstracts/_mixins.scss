@@ -129,12 +129,6 @@
 }
 // 声明绝对定位的垂直居中
 
-@mixin bg-img($img-href...) {
-  background: url($img-href) no-repeat;
-  background-size: $img-width $img-height;
-}
-// 声明引用图片的混合宏
-
 @mixin btn-hover($bg-color) {
   &:hover {
     background-color: lighten($bg-color, 20%);

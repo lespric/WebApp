@@ -18,7 +18,7 @@
     width: 75%;
     height: 100%;
     background-color: $color-light;
-  }
+  } // 定义aside侧边栏的列表组样式
 }
 // 定义列表组的样式
 
@@ -52,15 +52,17 @@
   &-aside {
     @include flex-align-center;
     @include flex-justify-between;
+
     padding-left: 1.4em;
     padding-right: 2.6em;
     width: 100%;
     height: 4em;
+
     border-bottom: 0.1em solid $color-list-border;
     cursor: pointer;
     &:hover {
       background-color: $color-list-border;
-    }
+    } // 定义aside侧边栏列表基本样式和悬浮状态
 
     & .icon {
        @include flex-center;
@@ -72,13 +74,13 @@
 
        border: 0.2em solid $color-primary;
        border-radius: 50%;
-    }
+    } // 定义aside侧边栏列表图标
 
     & .text {
       color: $color-primary;
       margin-right: auto;
       margin-left: 1.2em;
-    }
+    } // 定义aside侧边栏列表文本
 
     & .arrow {
       width: 1.6em;
@@ -87,7 +89,8 @@
       border-top: 0.2em solid $color-primary;
       border-right: 0.2em solid $color-primary;
       transform: rotate(45deg);
-    }
-  } // 定义aside页面列表组的每个列表正文样式
+    } // 定义aside侧边栏列表箭头
+  } 
+  // 定义aside侧边栏列表组的每个列表正文样式
 }
 // 定义列表组内每个列表的样式
