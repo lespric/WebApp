@@ -136,6 +136,7 @@
 
     &-left {
       @extend .footer-ingame-btn;
+      @include flex-center;
       background-color: $color-remove;
     }
     &-right {

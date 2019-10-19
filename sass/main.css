@@ -1732,6 +1732,9 @@ p {
   text-overflow: ellipsis;
   white-space: nowrap; }
   .footer-ingame-btn-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #F66F6F; }
   .footer-ingame-btn-right {
     margin-left: 1.2em;
