@@ -29,7 +29,6 @@ sass/
 |   |– _header.scss       # Header
 |   |– _main.scss         # Main
 |   |– _footer.scss       # Footer
-|   |– _form.scss         # Form
 |   |– _aside.scss        # Aside
 |
 |– vendors/
@@ -1577,6 +1576,7 @@ p {
     overflow-x: hidden; }
   .main-ingame {
     position: relative;
+    padding-bottom: 9.5em;
     background-color: #29BDE0; }
 
 .footer, .footer-ingame, .footer-result {
@@ -1602,9 +1602,6 @@ p {
     width: 100%;
     background-color: rgba(41, 189, 224, 0.48);
     border-top: 0.1em solid #FFF; }
-
-.form-ingame {
-  padding: 2.2em; }
 
 .aside {
   position: absolute;
@@ -2070,6 +2067,10 @@ p {
   border-width: 0.5rem 0.5rem 0;
   border-top-color: rgba(255, 255, 255, 0.67); }
 
+.form-ingame {
+  padding: 2.2em;
+  padding-bottom: 0; }
+
 .form-group-ingame {
   display: flex;
   flex-direction: column;
@@ -2131,9 +2132,6 @@ p {
       background-position: -3.15em 0; }
     .form-group-ingame .form-btn-group .form-btn-4 {
       background-position: -4.85em 0; }
-      @media (max-width: 576px) {
-        .form-group-ingame .form-btn-group .form-btn-4 {
-          background-position: -4.7em 0; } }
   .form-group-ingame .form-check-input {
     display: none; }
     .form-group-ingame .form-check-input:checked + .form-check-label {
