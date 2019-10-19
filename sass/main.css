@@ -2128,9 +2128,12 @@ p {
     .form-group-ingame .form-btn-group .form-btn-2 {
       background-position: -1.7em 0; }
     .form-group-ingame .form-btn-group .form-btn-3 {
-      background-position: -3.2em 0; }
+      background-position: -3.15em 0; }
     .form-group-ingame .form-btn-group .form-btn-4 {
-      background-position: -4.8em 0; }
+      background-position: -4.85em 0; }
+      @media (max-width: 576px) {
+        .form-group-ingame .form-btn-group .form-btn-4 {
+          background-position: -4.7em 0; } }
   .form-group-ingame .form-check-input {
     display: none; }
     .form-group-ingame .form-check-input:checked + .form-check-label {

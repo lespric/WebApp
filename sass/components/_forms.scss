@@ -73,11 +73,14 @@
     }
     & .form-btn-3 {
       @extend .form-btn;
-      background-position: -3.2em 0;
+      background-position: -3.15em 0;
     }
     & .form-btn-4 {
       @extend .form-btn;
-      background-position: -4.8em 0;
+      background-position: -4.85em 0;
+      @media (max-width: 576px) {
+        background-position: -4.7em 0;
+      }
     }
   } // 定义按钮组的雪碧图
 
