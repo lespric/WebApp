@@ -86,118 +86,118 @@
 }
 // 定义模态框的主体内容的布局
 
-.modal-footer {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+// .modal-footer {
+//   display: -ms-flexbox;
+//   display: flex;
+//   -ms-flex-align: center;
+//   align-items: center;
+//   -ms-flex-pack: end;
+//   justify-content: flex-end;
 
-  padding: 1.4em 2em;
-  margin-bottom: 0.4em;
-  border-bottom: 0.1em solid #e1e5e7;
-}
-// 定义模态框的底部的布局
+//   padding: 1.4em 2em;
+//   margin-bottom: 0.4em;
+//   border-bottom: 0.1em solid #e1e5e7;
+// }
+// // 定义模态框的底部的布局
 
-.modal-footer > :not(:first-child) {
-  margin-left: 0.25rem;
-}
+// .modal-footer > :not(:first-child) {
+//   margin-left: 0.25rem;
+// }
 
-.modal-footer > :not(:last-child) {
-  margin-right: 0.25rem;
-}
-// 定义模态框底部按钮的间距
+// .modal-footer > :not(:last-child) {
+//   margin-right: 0.25rem;
+// }
+// // 定义模态框底部按钮的间距
 
-.modal.fade .modal-dialog {
-  transition: -webkit-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
-  -webkit-transform: translate(0, -64em);
-  transform: translate(0, -64em);
-}
-@media (prefers-reduced-motion: reduce) {
-  .modal.fade .modal-dialog {
-    transition: none;
-  }
-}
-.modal.show .modal-dialog {
-  -webkit-transform: none;
-  transform: none;
-}
-// 定义模态框弹出时的动画为淡入淡出
+// .modal.fade .modal-dialog {
+//   transition: -webkit-transform 0.3s ease-out;
+//   transition: transform 0.3s ease-out;
+//   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+//   -webkit-transform: translate(0, -64em);
+//   transform: translate(0, -64em);
+// }
+// @media (prefers-reduced-motion: reduce) {
+//   .modal.fade .modal-dialog {
+//     transition: none;
+//   }
+// }
+// .modal.show .modal-dialog {
+//   -webkit-transform: none;
+//   transform: none;
+// }
+// // 定义模态框弹出时的动画为淡入淡出
 
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  width: 100vw;
-  height: 100vh;
-  background-color: #000;
-}
-.modal-backdrop.fade {
-  opacity: 0;
-}
-.modal-backdrop.show {
-  opacity: 0.5;
-}
-// 定义模态框的背景板的样式和淡入淡出变化
+// .modal-backdrop {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: 3;
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: #000;
+// }
+// .modal-backdrop.fade {
+//   opacity: 0;
+// }
+// .modal-backdrop.show {
+//   opacity: 0.5;
+// }
+// // 定义模态框的背景板的样式和淡入淡出变化
 
-.modal-dialog-scrollable {
-  display: -ms-flexbox;
-  display: flex;
-  max-height: calc(100% - 1rem);
-}
-.modal-dialog-scrollable .modal-content {
-  max-height: calc(100vh - 1rem);
-  overflow: hidden;
-}
-.modal-dialog-scrollable .modal-header,
-.modal-dialog-scrollable .modal-footer {
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-.modal-dialog-scrollable .modal-body {
-  overflow-y: auto;
-}
-// 实现模态框长文本的滚动浏览效果
+// .modal-dialog-scrollable {
+//   display: -ms-flexbox;
+//   display: flex;
+//   max-height: calc(100% - 1rem);
+// }
+// .modal-dialog-scrollable .modal-content {
+//   max-height: calc(100vh - 1rem);
+//   overflow: hidden;
+// }
+// .modal-dialog-scrollable .modal-header,
+// .modal-dialog-scrollable .modal-footer {
+//   -ms-flex-negative: 0;
+//   flex-shrink: 0;
+// }
+// .modal-dialog-scrollable .modal-body {
+//   overflow-y: auto;
+// }
+// // 实现模态框长文本的滚动浏览效果
 
-.modal-dialog-centered {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: calc(100% - 1rem);
-}
-.modal-dialog-centered::before {
-  display: block;
-  height: calc(100vh - 1rem);
-  content: "";
-}
-.modal-dialog-centered.modal-dialog-scrollable {
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 100%;
-}
-.modal-dialog-centered.modal-dialog-scrollable .modal-content {
-  max-height: none;
-}
-.modal-dialog-centered.modal-dialog-scrollable::before {
-  content: none;
-}
-// 将.modal-dialog-centered 加入到 .modal-dialog 来使互动视窗垂直居中
+// .modal-dialog-centered {
+//   display: -ms-flexbox;
+//   display: flex;
+//   -ms-flex-align: center;
+//   align-items: center;
+//   min-height: calc(100% - 1rem);
+// }
+// .modal-dialog-centered::before {
+//   display: block;
+//   height: calc(100vh - 1rem);
+//   content: "";
+// }
+// .modal-dialog-centered.modal-dialog-scrollable {
+//   -ms-flex-direction: column;
+//   flex-direction: column;
+//   -ms-flex-pack: center;
+//   justify-content: center;
+//   height: 100%;
+// }
+// .modal-dialog-centered.modal-dialog-scrollable .modal-content {
+//   max-height: none;
+// }
+// .modal-dialog-centered.modal-dialog-scrollable::before {
+//   content: none;
+// }
+// // 将.modal-dialog-centered 加入到 .modal-dialog 来使互动视窗垂直居中
 
-.modal-scrollbar-measure {
-  position: absolute;
-  top: -9999px;
-  width: 50px;
-  height: 50px;
-  overflow: scroll;
-}
-// 定义模态框在长文本时的浏览情况
+// .modal-scrollbar-measure {
+//   position: absolute;
+//   top: -9999px;
+//   width: 50px;
+//   height: 50px;
+//   overflow: scroll;
+// }
+// // 定义模态框在长文本时的浏览情况
 
 // @media (min-width: 576px) {
 //   .modal-dialog {

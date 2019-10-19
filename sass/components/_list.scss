@@ -1,34 +1,93 @@
 @charset "utf-8";
 
 .list-group {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  &-result {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  
+    padding-left: 0;
+    padding-bottom: 6.5em;
+  
+    background-color: $color-light;
+  } // 定义result页面列表组的样式
 
-  padding-left: 0;
-  padding-bottom: 8.4em;
-
-  background-color: #fff;
+  &-aside {
+    width: 75%;
+    height: 100%;
+    background-color: $color-light;
+  }
 }
 // 定义列表组的样式
 
 .list-group-item {
-  display: flex;
-  align-items: center;
-  padding: 0 3.2em;
-  border-bottom: 0.1em solid $color-secondary;
+  &-result {
+    @include flex-column;
+    padding: 0 12%;
+    padding-top: 0.6em;
+    padding-bottom: 0.7em;
+    border-bottom: 0.1em solid $color-list-border;
+  
+    &-heading {
+      @include flex-justify-between;
+      align-items: flex-end; 
+  
+      & .title {
+        margin: 0;
+        color: $color-list-title-font;
+      }
+      & .time {
+        color: $color-list-time-font;
+      }
+    } // 定义result页面列表组的每个列表标题样式
+    
+    &-text {
+      color: $color-list-text-font;
+    } // 定义result页面列表组的每个列表正文样式
+  }
 
-  &:not(:last-child) {
-    height: 5em;
-  }
-  &:last-child {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    & .list-item-title {
-      align-self: flex-start;
+
+  &-aside {
+    @include flex-align-center;
+    @include flex-justify-between;
+    padding-left: 1.4em;
+    padding-right: 2.6em;
+    width: 100%;
+    height: 4em;
+    border-bottom: 0.1em solid $color-list-border;
+    cursor: pointer;
+    &:hover {
+      background-color: $color-list-border;
     }
-  }
+
+    & .icon {
+       @include flex-center;
+       width: 1.8em;
+       height: 1.8em;
+
+       @include fs-(3);
+       color: $color-primary;
+
+       border: 0.2em solid $color-primary;
+       border-radius: 50%;
+    }
+
+    & .text {
+      color: $color-primary;
+      margin-right: auto;
+      margin-left: 1.2em;
+    }
+
+    & .arrow {
+      width: 1.6em;
+      height: 1.6em;
+
+      border-top: 0.2em solid $color-primary;
+      border-right: 0.2em solid $color-primary;
+      transform: rotate(45deg);
+    }
+  } // 定义aside页面列表组的每个列表正文样式
 }
 // 定义列表组内每个列表的样式

@@ -14,11 +14,6 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 // 定义所有div的结构化标签都是块状元素
 
-body {
-  background-color: $color-bg;
-}
-// 重置body标签的默认背景色
-
 button {
   padding: 0;
   background: none;
@@ -49,5 +44,6 @@ textarea:focus {
 a,
 a:focus {
   text-decoration: none;
+  color: #FFF;
 }
 // 清除链接下划线的默认样式

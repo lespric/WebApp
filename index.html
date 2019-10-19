@@ -20,23 +20,49 @@
     <link rel="stylesheet" href="../WebApp/sass/main.css" />
   </head>
 
-  <body ontouchstart>
+  <body class="body-home" ontouchstart>
+    <input class="aside-toggle" id="aside-toggle" type="checkbox" />
     <header class="header">
-      <button type="button" class="header-btn-left" data-toggle="dropdown">
+      <label type="button" class="header-btn-left" for="aside-toggle">
         <span class="glyphicon glyphicon-menu-hamburger"></span>
-      </button>
-      <ul class="dropdown-menu">
-        <li class="dropdown-item">设置</li>
-        <li class="dropdown-item">关于</li>
-      </ul>
+      </label>
     </header>
     <!--标题栏或导航栏-->
 
+    <aside class="aside container">
+      <article class="list-group-aside">
+        <div class="list-group-item-aside">
+          <span class="icon glyphicon glyphicon-bullhorn"></span>
+          <h1 class="text">公告</h1>
+          <span class="arrow"></span>
+        </div>
+        <div class="list-group-item-aside">
+          <span class="icon glyphicon glyphicon-cog"></span>
+          <h1 class="text">设置</h1>
+          <span class="arrow"></span>
+        </div>
+        <div class="list-group-item-aside">
+          <span class="icon glyphicon glyphicon-question-sign"></span>
+          <h1 class="text">帮助</h1>
+          <span class="arrow"></span>
+        </div>
+        <div class="list-group-item-aside">
+          <span class="icon glyphicon glyphicon-info-sign"></span>
+          <h1 class="text">关于</h1>
+          <span class="arrow"></span>
+        </div>
+      </article>
+      <label class="aside-hide" for="aside-toggle"></label>
+    </aside>
+    <!--侧边栏-->
+
     <main class="main-home container">
+      <article class="lastgame">
       <a class="lastgame-btn" type="button" href="result.html">
         <span class="lastgame-text">上次游戏：捉鬼猜词版</span>
         <span class="glyphicon glyphicon-chevron-right"></span>
       </a>
+    </article>
       <!--“上次游戏”板块-->
 
       <article class="carousel slide" id="sel-game" data-interval="false">
@@ -225,7 +251,11 @@
         </section>
         <!--“捉鬼游戏”板块轮播内容-->
 
-        <a class="carousel-control-next right" href="#sel-game" data-slide="next">
+        <a
+          class="carousel-control-next right"
+          href="#sel-game"
+          data-slide="next"
+        >
           <span class="glyphicon glyphicon-triangle-right"></span>
         </a>
         <!--“捉鬼游戏”板块翻页-->

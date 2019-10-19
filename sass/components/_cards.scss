@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+.card {
+  position: relative;
+  @include flex-column;
+  @include flex-align-center;
+
+  padding: 1.2em 12%;
+  width: 100%;
+  word-wrap: break-word;
+  background-color: $color-primary;
+}
+// 定义卡片组件的位置和布局
+
+.card-img {
+  width: 17.5em;
+  height: 10.2em;
+
+  background: url(../img/victory@3x\ .png) no-repeat;
+  background-size: cover;
+}
+// 定义卡片组件内图片的样式
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin-top: 1.1em;
+  width: 100%;
+
+  &-title {
+    margin: 0;
+    color: $color-secondary;
+  }
+  // 定义卡片组件的主体内容的标题
+  &-text {
+    margin-top: 2.5em;
+    @include flex-column;
+    @include fs-(3);
+    color: $color-light;
+  }
+  // 定义卡片组件的主体内容的正文
+}
+// 定义卡片组件的主体内容
+
+

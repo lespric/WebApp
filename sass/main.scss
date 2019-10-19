@@ -13,29 +13,29 @@ sass/
 |   |– _reset.scss        # Reset
 |   |– _typography.scss   # Typography rules
 |   |– _colors.scss       # Colors' type
+|   |– _animation.scss    # Animation
 |
 |– components/
 |   |– _buttons.scss      # Buttons
 |   |– _carousel.scss     # Carousel
 |   |– _list.scss         # List-group
-|   |– _modal.scss        # Modal
 |   |– _dropdown.scss     # Dropdown
 |   |– _popover.scss      # Popover
 |   |– _forms.scss        # Form & input
+|   |– _cards.scss        # Cards
+
 |
 |– layout/
+|   |– _body.scss         # Body
 |   |– _grid.scss         # Grid system
 |   |– _header.scss       # Header
 |   |– _main.scss         # Main
-|   |– _header.scss       # Header
 |   |– _footer.scss       # Footer
-|
-|– pages/
-|   |– _home.scss         # Home specific styles
+|   |– _form.scss         # Form
+|   |– _aside.scss        # Aside
 |
 |– vendors/
 |   |– _normalize.scss    # normalize
-|   |– _iosSelect.scss    # isoSelect
 |
 `– main.scss              # Main Sass file
 */
@@ -52,20 +52,23 @@ sass/
 @import
   "base/reset",
   "base/typography",
-  "base/colors";
+  "base/colors",
+  "base/animation";
 
 @import
+  "layout/body",
   "layout/grid",
   "layout/header",
   "layout/main",
   "layout/footer",
-  "layout/form";
+  "layout/form",
+  "layout/aside";
 
 @import
   "components/buttons",
   "components/carousel",
   "components/list",
-  "components/modal",
   "components/dropdown",
   "components/popover",
-  "components/forms";
+  "components/forms",
+  "components/cards";

@@ -2,6 +2,8 @@
 
 .header {
   position: fixed;
+  left: 0;
+  right: 0;
   top: 0;
   z-index: 2;
 
@@ -11,6 +13,11 @@
   
   background-color: $color-primary;
   box-shadow: 0 0 0.7em rgba(40, 88, 99, 0.14);
+
+  &-result {
+    @extend .header;
+    border-bottom: 0.1em solid $color-light;
+  }
 }
 // 定义标题栏的宽高和背景颜色
 

@@ -95,6 +95,10 @@
   justify-content: center;
   align-items: center;
 }
+@mixin flex-justify-between {
+  display: flex;
+  justify-content: space-between;
+}
 // 声明flex布局各种类型的混合宏
 
 @mixin width-justify-center($this-width) {

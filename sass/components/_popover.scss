@@ -65,7 +65,8 @@
   color: $color-popover-text;
 
   &::after {
-    @include absolute-align-center;
+    position: absolute;
+    top: 0.5em;
     left: auto;
     right: 0.5em;
 
@@ -76,6 +77,7 @@
 
     background: url(../img/play@2x.png) no-repeat;
     background-size: cover;
+    @include rotate-360;
   }
 }
 // 定义弹出框的弹出信息区域的主体内容

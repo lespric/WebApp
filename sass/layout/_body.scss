@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+.body {
+  background-color: $color-bg;
+
+  &-home {
+    @extend .body;
+    position: relative;
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    @include clearfix;
+  }
+}
+// 重置body标签的默认背景色

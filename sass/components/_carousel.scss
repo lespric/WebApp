@@ -2,8 +2,9 @@
 
 .carousel {
   position: relative;
+  padding: 0 1.8em;
   padding-bottom: 2em;
-  background-color: $color-light;
+  background-color: $color-bg;
 
   @at-root &.pointer-event {
     -ms-touch-action: pan-y;
@@ -14,8 +15,10 @@
 
 .carousel-inner {
   position: relative;
+  padding-bottom: 2em;
   width: 100%;
   overflow-x: hidden;
+  background-color: $color-light;
 }
 
 .carousel-inner::after {
@@ -97,7 +100,8 @@
 
 .carousel-indicators {
   position: absolute;
-  bottom: 0;
+  bottom: 2em;
+  z-index: 1;
   @include flex-justify-center;
 
   width: 100%;
@@ -133,7 +137,7 @@
 }
 .carousel-control-next {
   @include absolute-align-center;
-  right: 0;
+  right: 1.8em;
 }
 @media (prefers-reduced-motion: reduce) {
   .carousel-control-prev,

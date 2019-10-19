@@ -5,7 +5,9 @@
   @include flex-align-center;
 
   & .form-check-label {
+    position: relative;
     @include flex-column;
+    margin-bottom: 3.6em;
 
     width: 6.6em;
     height: 6.6em;
@@ -36,12 +38,15 @@
       border-color: $color-secondary;
       & + .form-btn-group {
         visibility: visible;
+        @include slide-align(1em);
       }
     }
   } // 定义表单的展示文本及背景颜色
 
   & .form-btn-group {
-    margin: 1em 0;
+    position: absolute;
+    top: 6.6em;
+
     @include flex-align-center;
     justify-content: space-between;
     width: 6.6em;
@@ -64,15 +69,15 @@
     }
     & .form-btn-2 {
       @extend .form-btn;
-      background-position: -1.75em 0;
+      background-position: -1.7em 0;
     }
     & .form-btn-3 {
       @extend .form-btn;
-      background-position: -3.35em 0;
+      background-position: -3.2em 0;
     }
     & .form-btn-4 {
       @extend .form-btn;
-      background-position: -4.95em 0;
+      background-position: -4.8em 0;
     }
   } // 定义按钮组的雪碧图
 
@@ -84,6 +89,7 @@
     }
     &:checked ~ .form-btn-group {
       visibility: visible;
+      @include slide-align(1em);
     }
   } // 隐藏表单中的单选框，并且定义单选框选中时的动画状态
 }

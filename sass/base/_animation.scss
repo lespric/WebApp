@@ -1,2 +1,25 @@
 @charset "utf-8";
 
+@mixin slide-align($Y-value) {
+    transform: translateY($Y-value);
+    transition: transform 0.2s ease;
+}
+// 定义垂直滑动的动画效果
+@mixin slide-justify($X-value) {
+   transform: translateX($X-value);
+   transition: transform 1s ease;
+}
+// 定义水平滑动的动画效果
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@mixin rotate-360 {
+    animation: rotate 2s linear infinite;
+}
+// 定义无穷旋转的动画效果
